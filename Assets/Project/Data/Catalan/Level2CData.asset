@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 616de3dbc7f688b4d98bf14589c1c117, type: 3}
+  m_Name: Level2CData
+  m_EditorClassIdentifier: 
+  levelName: 
+  subject: 
+  spawnMode: 0
+  moleCount: 4
+  levelTime: 30
+  visibleTime: 1.2
+  riseDuration: 0.25
+  riseDistance: 120
+  minSpawnInterval: 0.5
+  maxSpawnInterval: 1.5
+  maxConcurrentVisible: 2
+  contentsSprites: []
+  correctSpriteIndices: 
