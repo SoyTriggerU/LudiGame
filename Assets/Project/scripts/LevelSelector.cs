@@ -1,15 +1,19 @@
+using System.Collections;
 using UnityEngine;
 
 public class LevelSelector : MonoBehaviour
 {
     public LevelData[] allLevels;      
-    public LevelManager levelManager;  
+    public LevelManager levelManager;
+    public ScreenFader fader;
+    public float feedbackDelay = 1.5f;
 
     private int currentLevelIndex = 0;
 
     void Start()
     {
-        levelManager.OnLevelEnded += StartNextLevel;
+        levelManager.OnLevelEnded += HandleLevelChange;
+        levelManager.OnCorrectMoleHit += HandleLevelChange;
         StartFirstLevel();
     }
 
@@ -30,6 +34,33 @@ public class LevelSelector : MonoBehaviour
         else
         {
             Debug.Log("¡Todos los niveles completados!");
+        }
+    }
+
+    private void HandleLevelChange()
+    {
+        StartCoroutine(LevelTransitionCoroutine());
+    }
+
+    private IEnumerator LevelTransitionCoroutine()
+    {
+        yield return new WaitForSeconds(feedbackDelay);
+
+        if (fader != null)
+            yield return fader.FadeOut();
+
+        StartNextLevel();
+
+        if (fader != null)
+            yield return fader.FadeIn();
+    }
+
+    void OnDestroy()
+    {
+        if (levelManager != null)
+        {
+            levelManager.OnLevelEnded -= HandleLevelChange;
+            levelManager.OnCorrectMoleHit -= HandleLevelChange;
         }
     }
 }

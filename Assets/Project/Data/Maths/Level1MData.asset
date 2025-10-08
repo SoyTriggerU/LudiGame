@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616de3dbc7f688b4d98bf14589c1c117, type: 3}
   m_Name: Level1MData
   m_EditorClassIdentifier: 
-  levelName: 
-  subject: 
+  levelName: Level1
+  subject: Maths
   spawnMode: 0
   moleCount: 4
   levelTime: 30
@@ -23,5 +23,9 @@ MonoBehaviour:
   minSpawnInterval: 0.5
   maxSpawnInterval: 1.5
   maxConcurrentVisible: 2
-  contentsSprites: []
-  correctSpriteIndices: 
+  contentsSprites:
+  - {fileID: 21300000, guid: 2cfffa8ab2bbd68478f5029a53f2e4cd, type: 3}
+  - {fileID: 21300000, guid: 2cfffa8ab2bbd68478f5029a53f2e4cd, type: 3}
+  - {fileID: 21300000, guid: 2cfffa8ab2bbd68478f5029a53f2e4cd, type: 3}
+  - {fileID: 21300000, guid: 2cfffa8ab2bbd68478f5029a53f2e4cd, type: 3}
+  correctSpriteIndices: 02000000

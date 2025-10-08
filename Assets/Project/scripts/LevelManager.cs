@@ -8,27 +8,28 @@ public class LevelManager : MonoBehaviour
     public RectTransform[] holeTransforms;
     public GameObject molePrefab;
     public Transform moleParent;
-    public Text timerText;
-    public Text scoreText;
+    public LevelTimer timer;
 
     List<MoleUI> moles = new List<MoleUI>();
 
     private LevelData levelData;
-    float levelTimer;
-    int score = 0;
     bool running = false;
     Coroutine spawnRoutine;
 
+    public event System.Action OnCorrectMoleHit;
     public System.Action OnLevelEnded;
 
     public void StartLevel(LevelData data)
     {
         levelData = data;
         PrepareMoles();
-        levelTimer = levelData.levelTime;
-        score = 0;
-        UpdateUI();
         running = true;
+
+        if(timer != null)
+        {
+            timer.StartTimer(levelData.levelTime);
+            timer.OnTimerEnded += EndLevel;
+        }
 
         if (spawnRoutine != null) StopCoroutine(spawnRoutine);
         spawnRoutine = StartCoroutine(SpawnLoop());
@@ -67,7 +68,7 @@ public class LevelManager : MonoBehaviour
         if (levelData.spawnMode == SpawnMode.Sequential)
         {
             int idx = 0;
-            while (running && levelTimer > 0f)
+            while (running)
             {
                 var mole = moles[idx % moles.Count];
                 if (levelData.contentsSprites != null && levelData.contentsSprites.Length > 0)
@@ -80,14 +81,12 @@ public class LevelManager : MonoBehaviour
                 float wait = levelData.visibleTime + 0.15f;
                 yield return new WaitForSeconds(wait);
                 idx++;
-                levelTimer -= wait;
-                UpdateUI();
                 yield return null;
             }
         }
         else
         {
-            while (running && levelTimer > 0f)
+            while (running)
             {
                 int concurrent = 0;
                 foreach (var m in moles) if (m.IsVisible()) concurrent++;
@@ -109,8 +108,6 @@ public class LevelManager : MonoBehaviour
 
                 float wait = Random.Range(levelData.minSpawnInterval, levelData.maxSpawnInterval);
                 yield return new WaitForSeconds(wait);
-                levelTimer -= wait;
-                UpdateUI();
             }
         }
 
@@ -123,37 +120,27 @@ public class LevelManager : MonoBehaviour
         if (levelData.correctSpriteIndices != null)
         {
             foreach (var idx in levelData.correctSpriteIndices)
-            {
                 if (idx == mole.spriteIndex) { correct = true; break; }
-            }
         }
 
-        if (correct) score += 10;
-        else score -= 2;
-
-        // feedback visual/audio (impleméntarlo aquí)
-        UpdateUI();
+        if (correct)
+        {
+            ScoreManager.Instance.AddScore(10);
+            OnCorrectMoleHit?.Invoke(); 
+        }
+        else ScoreManager.Instance.SubtractScore(2);
     }
 
     void OnMoleHidden(MoleUI mole)
     {
-        
         bool wasCorrect = false;
         if (levelData.correctSpriteIndices != null)
         {
             foreach (var idx in levelData.correctSpriteIndices)
                 if (idx == mole.spriteIndex) { wasCorrect = true; break; }
         }
-        if (wasCorrect) score -= 1;
 
-        // feedback visual/audio (impleméntarlo aquí)
-        UpdateUI();
-    }
-
-    void UpdateUI()
-    {
-        if (timerText != null) timerText.text = Mathf.CeilToInt(levelTimer).ToString();
-        if (scoreText != null) scoreText.text = score.ToString();
+        if (wasCorrect) ScoreManager.Instance.SubtractScore(1);
     }
 
     void EndLevel()
@@ -162,7 +149,8 @@ public class LevelManager : MonoBehaviour
         if (spawnRoutine != null) StopCoroutine(spawnRoutine);
         foreach (var m in moles) if (m != null) m.gameObject.SetActive(false);
 
-        Debug.Log("Level ended. Score: " + score);
+        if (timer != null)
+            timer.OnTimerEnded -= EndLevel;
 
         OnLevelEnded?.Invoke();
     }
