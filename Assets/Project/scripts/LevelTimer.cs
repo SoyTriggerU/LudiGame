@@ -4,7 +4,6 @@ using System;
 
 public class LevelTimer : MonoBehaviour
 {
-    [Header("UI")]
     public TextMeshProUGUI timerText;
 
     private float currentTime;
