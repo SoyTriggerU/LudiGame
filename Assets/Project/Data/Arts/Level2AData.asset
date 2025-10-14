@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616de3dbc7f688b4d98bf14589c1c117, type: 3}
   m_Name: Level2AData
   m_EditorClassIdentifier: 
-  levelName: 
-  subject: 
-  spawnMode: 0
+  levelName: Level2
+  subject: Arts
+  spawnMode: 1
   moleCount: 4
   levelTime: 30
   visibleTime: 1.2
@@ -23,5 +23,12 @@ MonoBehaviour:
   minSpawnInterval: 0.5
   maxSpawnInterval: 1.5
   maxConcurrentVisible: 2
-  contentsSprites: []
-  correctSpriteIndices: 
+  contentsSprites:
+  - {fileID: 8957850788779409619, guid: c95a91a57d5756b4ebe5a83199acfbcb, type: 3}
+  - {fileID: -3059830652048113041, guid: 40eeacdf24b1d834894bb00da93cb9cf, type: 3}
+  - {fileID: 6561858567411596728, guid: 443450a529e85d04f9b368f09a5a1a86, type: 3}
+  - {fileID: -5345435871839784581, guid: 2f13bb071f4f4624f96be4eb7291fd8f, type: 3}
+  questions:
+  - Nombre de color blau fosc
+  - Nombre de color blau + groc
+  correctSpriteIndexPerQuestion: 0200000003000000

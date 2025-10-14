@@ -9,23 +9,30 @@ public class LevelManager : MonoBehaviour
     public GameObject molePrefab;
     public Transform moleParent;
     public LevelTimer timer;
+    public QuestionUI questionUI;
+
+    public bool acceptInput = true;
 
     List<MoleUI> moles = new List<MoleUI>();
 
     private LevelData levelData;
+    private int currentQuestionIndex = 0;
     bool running = false;
-    Coroutine spawnRoutine;
+    private Coroutine spawnRoutine;
 
-    public event System.Action OnCorrectMoleHit;
     public System.Action OnLevelEnded;
+
 
     public void StartLevel(LevelData data)
     {
         levelData = data;
         PrepareMoles();
+        currentQuestionIndex = 0;
         running = true;
 
-        if(timer != null)
+        ShowCurrentQuestion();
+
+        if (timer != null)
         {
             timer.StartTimer(levelData.levelTime);
             timer.OnTimerEnded += EndLevel;
@@ -35,9 +42,21 @@ public class LevelManager : MonoBehaviour
         spawnRoutine = StartCoroutine(SpawnLoop());
     }
 
+    void ShowCurrentQuestion()
+    {
+        if (questionUI == null || levelData.questions.Length == 0) return;
+
+        questionUI.OnSlideInComplete = () =>
+        {
+            acceptInput = true;
+        };
+
+        questionUI.ShowQuestion(levelData.questions[currentQuestionIndex]);
+    }
     void PrepareMoles()
     {
-        foreach (var m in moles) if (m != null) Destroy(m.gameObject);
+        foreach (var m in moles)
+            if (m != null) Destroy(m.gameObject);
         moles.Clear();
 
         int count = Mathf.Clamp(levelData.moleCount, 1, holeTransforms.Length);
@@ -116,27 +135,57 @@ public class LevelManager : MonoBehaviour
 
     void OnMoleHit(MoleUI mole)
     {
-        bool correct = false;
-        if (levelData.correctSpriteIndices != null)
-        {
-            foreach (var idx in levelData.correctSpriteIndices)
-                if (idx == mole.spriteIndex) { correct = true; break; }
-        }
+        if (!acceptInput) return;
+
+        int correctIdx = -1;
+        if (levelData.correctSpriteIndexPerQuestion != null && currentQuestionIndex < levelData.correctSpriteIndexPerQuestion.Length)
+            correctIdx = levelData.correctSpriteIndexPerQuestion[currentQuestionIndex];
+
+        bool correct = (mole.spriteIndex == correctIdx);
 
         if (correct)
         {
+            acceptInput = false;
             ScoreManager.Instance.AddScore(10);
-            OnCorrectMoleHit?.Invoke(); 
+            questionUI.ShowCorrect();
+
+            StartCoroutine(NextQuestionAfterDelay());
         }
-        else ScoreManager.Instance.SubtractScore(2);
+        else
+        {
+            questionUI.ShowWrong();
+            ScoreManager.Instance.SubtractScore(2);
+        }
+    }
+
+    IEnumerator NextQuestionAfterDelay()
+    {
+        float delay = 2.5f;
+        if (questionUI != null)
+            delay = questionUI.DelayBetweenQuestions;
+
+        yield return new WaitForSeconds(delay);
+
+        currentQuestionIndex++;
+
+        if (currentQuestionIndex < levelData.questions.Length)
+        {
+            questionUI.ShowQuestion(levelData.questions[currentQuestionIndex]);
+        }
+        else
+        {
+            running = false;
+            OnLevelEnded?.Invoke();
+            EndLevel();
+        }
     }
 
     void OnMoleHidden(MoleUI mole)
     {
         bool wasCorrect = false;
-        if (levelData.correctSpriteIndices != null)
+        if (levelData.correctSpriteIndexPerQuestion != null)
         {
-            foreach (var idx in levelData.correctSpriteIndices)
+            foreach (var idx in levelData.correctSpriteIndexPerQuestion)
                 if (idx == mole.spriteIndex) { wasCorrect = true; break; }
         }
 
@@ -151,7 +200,5 @@ public class LevelManager : MonoBehaviour
 
         if (timer != null)
             timer.OnTimerEnded -= EndLevel;
-
-        OnLevelEnded?.Invoke();
     }
 }

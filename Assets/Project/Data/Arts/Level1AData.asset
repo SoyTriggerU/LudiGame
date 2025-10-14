@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616de3dbc7f688b4d98bf14589c1c117, type: 3}
   m_Name: Level1AData
   m_EditorClassIdentifier: 
-  levelName: 
-  subject: 
+  levelName: Level1
+  subject: Arts
   spawnMode: 0
   moleCount: 4
   levelTime: 30
@@ -23,5 +23,12 @@ MonoBehaviour:
   minSpawnInterval: 0.5
   maxSpawnInterval: 1.5
   maxConcurrentVisible: 2
-  contentsSprites: []
-  correctSpriteIndices: 
+  contentsSprites:
+  - {fileID: 5930387388751348050, guid: edcd9d6ce9167c24d9aca7fd31f5886a, type: 3}
+  - {fileID: 8957850788779409619, guid: c95a91a57d5756b4ebe5a83199acfbcb, type: 3}
+  - {fileID: 6561858567411596728, guid: 443450a529e85d04f9b368f09a5a1a86, type: 3}
+  - {fileID: -5345435871839784581, guid: 2f13bb071f4f4624f96be4eb7291fd8f, type: 3}
+  questions:
+  - Nombre de color taronja
+  - Nombre de color verd
+  correctSpriteIndexPerQuestion: 0100000003000000

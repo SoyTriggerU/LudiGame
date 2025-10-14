@@ -7,6 +7,7 @@ public class LevelData : ScriptableObject
 {
     public string levelName;
     public string subject;
+
     public SpawnMode spawnMode = SpawnMode.Sequential;
 
     [Header("Moles / spawn")]
@@ -20,6 +21,9 @@ public class LevelData : ScriptableObject
     public int maxConcurrentVisible = 2;
 
     [Header("Sprites (opciones)")]
-    public Sprite[] contentsSprites;        
-    public int[] correctSpriteIndices; 
+    public Sprite[] contentsSprites;
+
+    [Header("Preguntas")]
+    public string[] questions;
+    public int[] correctSpriteIndexPerQuestion;
 }
