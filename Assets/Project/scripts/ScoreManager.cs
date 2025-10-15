@@ -29,6 +29,39 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
+    void OnEnable()
+    {
+        UnityEngine.SceneManagement.SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        UnityEngine.SceneManagement.SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(UnityEngine.SceneManagement.Scene scene, UnityEngine.SceneManagement.LoadSceneMode mode)
+    {
+        if (scoreTextGlobal == null)
+        {
+            var textObj = GameObject.FindWithTag("GlobalScoreText");
+            if (textObj != null)
+            {
+                scoreTextGlobal = textObj.GetComponent<TextMeshProUGUI>();
+                UpdateGlobalUI();
+            }
+        }
+
+        if (scoreTextTemporary == null)
+        {
+            var obj = GameObject.FindWithTag("TempScoreText");
+            if (obj != null)
+            {
+                scoreTextTemporary = obj.GetComponent<TextMeshProUGUI>();
+                UpdateTempUI();
+            }
+        }
+    }
+
     public void AddTempScore(int amount)
     {
         tempScore += amount;
@@ -80,4 +113,6 @@ public class ScoreManager : MonoBehaviour
         if (scoreTextGlobal != null)
             scoreTextGlobal.text = "PUNTUACIÓ: " + globalScore;
     }
+
+    public int GetGlobalScore() => globalScore;
 }

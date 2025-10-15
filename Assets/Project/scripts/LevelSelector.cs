@@ -57,6 +57,14 @@ public class LevelSelector : MonoBehaviour
         }
         else
         {
+            if (ScoreManager.Instance != null)
+            {
+                Debug.Log(">>> Sumando temp al global...");
+                ScoreManager.Instance.AddTempToGlobal();
+                Debug.Log("TempScore: " + ScoreManager.Instance.TempScore +
+                          " | GlobalScore: " + ScoreManager.Instance.GlobalScore);
+            }
+
             FinishSubject();
         }
     }
@@ -93,7 +101,7 @@ public class LevelSelector : MonoBehaviour
             StartNextLevel();
     }
 
-    private void FinishSubject()
+    public void FinishSubject()
     {
         ScoreManager.Instance.AddTempToGlobal();
         ScoreManager.Instance.ResetTempScore();
