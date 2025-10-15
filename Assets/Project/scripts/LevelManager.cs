@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class LevelManager : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class LevelManager : MonoBehaviour
     public Transform moleParent;
     public LevelTimer timer;
     public QuestionUI questionUI;
+    public LevelCompleteUI completeUI;
+    public OutOfTimeUI outOfTimeUI;
 
     public bool acceptInput = true;
 
@@ -17,6 +20,7 @@ public class LevelManager : MonoBehaviour
 
     private LevelData levelData;
     private int currentQuestionIndex = 0;
+    private int startingScore;
     bool running = false;
     private Coroutine spawnRoutine;
 
@@ -28,18 +32,32 @@ public class LevelManager : MonoBehaviour
         levelData = data;
         PrepareMoles();
         currentQuestionIndex = 0;
+        timer.ResumeTimer();
         running = true;
+
+        startingScore = ScoreManager.Instance.TempScore;
 
         ShowCurrentQuestion();
 
         if (timer != null)
         {
-            timer.StartTimer(levelData.levelTime);
-            timer.OnTimerEnded += EndLevel;
+            StartCoroutine(StartTimerWithDelay(0.75f));
         }
 
         if (spawnRoutine != null) StopCoroutine(spawnRoutine);
         spawnRoutine = StartCoroutine(SpawnLoop());
+
+        if (outOfTimeUI != null)
+            outOfTimeUI.Setup(this);
+    }
+
+    void SetMolesActive(bool active)
+    {
+        foreach (var mole in moles)
+        {
+            if (mole != null)
+                mole.gameObject.SetActive(active);
+        }
     }
 
     void ShowCurrentQuestion()
@@ -49,6 +67,7 @@ public class LevelManager : MonoBehaviour
         questionUI.OnSlideInComplete = () =>
         {
             acceptInput = true;
+            SetMolesActive(true);
         };
 
         questionUI.ShowQuestion(levelData.questions[currentQuestionIndex]);
@@ -77,7 +96,6 @@ public class LevelManager : MonoBehaviour
 
             mole.Setup(initialSprite, initialIndex, levelData.riseDistance, levelData.riseDuration);
             mole.OnHit += OnMoleHit;
-            mole.OnHidden += OnMoleHidden;
             moles.Add(mole);
         }
     }
@@ -133,6 +151,34 @@ public class LevelManager : MonoBehaviour
         EndLevel();
     }
 
+    private IEnumerator StartTimerWithDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        if (timer != null && levelData != null)
+        {
+            timer.StartTimer(levelData.levelTime);
+            timer.OnTimerEnded += HandleOutOfTime;
+        }
+    }
+
+    void PauseSpawnLoop()
+    {
+        if (spawnRoutine != null)
+        {
+            StopCoroutine(spawnRoutine);
+            spawnRoutine = null;
+        }
+    }
+
+    void ResumeSpawnLoop()
+    {
+        if (spawnRoutine == null && running)
+        {
+            spawnRoutine = StartCoroutine(SpawnLoop());
+        }
+    }
+
     void OnMoleHit(MoleUI mole)
     {
         if (!acceptInput) return;
@@ -146,7 +192,9 @@ public class LevelManager : MonoBehaviour
         if (correct)
         {
             acceptInput = false;
-            ScoreManager.Instance.AddScore(10);
+            PauseSpawnLoop();
+            SetMolesActive(false);
+            ScoreManager.Instance.AddTempScore(10);
             questionUI.ShowCorrect();
 
             StartCoroutine(NextQuestionAfterDelay());
@@ -154,7 +202,7 @@ public class LevelManager : MonoBehaviour
         else
         {
             questionUI.ShowWrong();
-            ScoreManager.Instance.SubtractScore(2);
+            ScoreManager.Instance.SubtractTempScore(2);
         }
     }
 
@@ -171,25 +219,61 @@ public class LevelManager : MonoBehaviour
         if (currentQuestionIndex < levelData.questions.Length)
         {
             questionUI.ShowQuestion(levelData.questions[currentQuestionIndex]);
+            yield return new WaitUntil(() => questionUI.IsSlideInComplete);
+            SetMolesActive(true);
+            ResumeSpawnLoop();
+            acceptInput = true;
         }
         else
         {
             running = false;
-            OnLevelEnded?.Invoke();
-            EndLevel();
+            if (timer != null)
+                timer.PauseTimer();
+
+            StartCoroutine(ShowLevelCompleteAndEnd());
         }
     }
 
-    void OnMoleHidden(MoleUI mole)
+    private IEnumerator ShowLevelCompleteAndEnd()
     {
-        bool wasCorrect = false;
-        if (levelData.correctSpriteIndexPerQuestion != null)
+        if (completeUI != null)
+            yield return completeUI.ShowMessage("NIVELL COMPLETAT!");
+
+        OnLevelEnded?.Invoke();
+        EndLevel();
+    }
+
+    private void HandleOutOfTime()
+    {
+        running = false;
+        if (timer != null)
+            timer.PauseTimer();
+
+        if (outOfTimeUI != null)
+            outOfTimeUI.Show();
+    }
+
+    public void RestartCurrentLevel(LevelData data)
+    {
+        ScoreManager.Instance.SetTempScore(startingScore);
+
+        if (spawnRoutine != null) StopCoroutine(spawnRoutine);
+
+        foreach (var m in moles)
+            if (m != null) m.gameObject.SetActive(false);
+
+        if (timer != null)
         {
-            foreach (var idx in levelData.correctSpriteIndexPerQuestion)
-                if (idx == mole.spriteIndex) { wasCorrect = true; break; }
+            timer.StopTimer();
+            timer.StartTimer(data.levelTime);
         }
 
-        if (wasCorrect) ScoreManager.Instance.SubtractScore(1);
+        currentQuestionIndex = 0;
+        running = true;
+
+        ShowCurrentQuestion();
+
+        spawnRoutine = StartCoroutine(SpawnLoop());
     }
 
     void EndLevel()
@@ -199,6 +283,6 @@ public class LevelManager : MonoBehaviour
         foreach (var m in moles) if (m != null) m.gameObject.SetActive(false);
 
         if (timer != null)
-            timer.OnTimerEnded -= EndLevel;
+            timer.OnTimerEnded -= HandleOutOfTime;
     }
 }

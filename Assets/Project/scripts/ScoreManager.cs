@@ -1,17 +1,20 @@
 using UnityEngine;
 using TMPro;
 using System;
+using System.Collections.Generic;
 
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager Instance;
 
-    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI scoreTextTemporary;
+    public TextMeshProUGUI scoreTextGlobal;
 
-    private int currentScore = 0;
-    public int CurrentScore => currentScore;
+    private int tempScore = 0;
+    private int globalScore = 0;
 
-    public event Action<int> OnScoreChanged;
+    public int TempScore => tempScore;
+    public int GlobalScore => globalScore;
 
     void Awake()
     {
@@ -26,36 +29,55 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
-    void Start()
+    public void AddTempScore(int amount)
     {
-        UpdateUI();
+        tempScore += amount;
+        UpdateTempUI();
     }
 
-    public void AddScore(int amount)
+    public void SubtractTempScore(int amount)
     {
-        currentScore += amount;
-        UpdateUI();
-        OnScoreChanged?.Invoke(currentScore);
+        tempScore -= amount;
+        if (tempScore < 0) tempScore = 0;
+        UpdateTempUI();
     }
 
-    public void SubtractScore(int amount)
+    public void ResetTempScore()
     {
-        currentScore -= amount;
-        if (currentScore < 0) currentScore = 0;
-        UpdateUI();
-        OnScoreChanged?.Invoke(currentScore);
+        tempScore = 0;
+        UpdateTempUI();
+    }
+    public void SetTempScore(int value)
+    {
+        tempScore = value;
+        UpdateTempUI();
     }
 
-    public void ResetScore()
+    private void UpdateTempUI()
     {
-        currentScore = 0;
-        UpdateUI();
-        OnScoreChanged?.Invoke(currentScore);
+        if (scoreTextTemporary != null)
+            scoreTextTemporary.text = "PUNTUACIÓ: " + tempScore;
     }
 
-    private void UpdateUI()
+    public void AddTempToGlobal()
     {
-        if (scoreText != null)
-            scoreText.text = currentScore.ToString();
+        globalScore += tempScore;
+        tempScore = 0;
+        UpdateGlobalUI();
+        UpdateTempUI();
+    }
+
+    public void ResetGlobalScore()
+    {
+        globalScore = 0;
+        tempScore = 0;
+        UpdateGlobalUI();
+        UpdateTempUI();
+    }
+
+    private void UpdateGlobalUI()
+    {
+        if (scoreTextGlobal != null)
+            scoreTextGlobal.text = "PUNTUACIÓ: " + globalScore;
     }
 }

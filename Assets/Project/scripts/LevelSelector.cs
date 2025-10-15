@@ -14,7 +14,7 @@ public class LevelSelector : MonoBehaviour
     public float feedbackDelay = 1.5f;
 
     private int currentLevelIndex = 0;
-    public enum Subject { Math, Art, Catalan, Spanish }
+    public enum Subject { Math, English, Catalan, Spanish }
     public Subject currentSubject = Subject.Math;
     private LevelData[] CurrentLevels
     {
@@ -23,7 +23,7 @@ public class LevelSelector : MonoBehaviour
             switch (currentSubject)
             {
                 case Subject.Math: return MathLevels;
-                case Subject.Art: return ArtLevels;
+                case Subject.English: return ArtLevels;
                 case Subject.Catalan: return CatalanLevels;
                 case Subject.Spanish: return SpanishLevels;
                 default: return null;
@@ -57,8 +57,7 @@ public class LevelSelector : MonoBehaviour
         }
         else
         {
-            Debug.Log("¡Todos los niveles de " + currentSubject + " completados!");
-            ReturnToSubjectMenu();
+            FinishSubject();
         }
     }
 
@@ -69,9 +68,14 @@ public class LevelSelector : MonoBehaviour
         StartFirstLevel();
     }
 
-    private void ReturnToSubjectMenu()
+    public void RestartCurrentLevel()
     {
-        SceneManager.LoadScene("MenuScene");
+        var levels = CurrentLevels;
+        if (levels != null && currentLevelIndex < levels.Length)
+        {
+
+            levelManager.RestartCurrentLevel(levels[currentLevelIndex]);
+        }
     }
 
     private void HandleLevelChange()
@@ -84,12 +88,17 @@ public class LevelSelector : MonoBehaviour
         yield return new WaitForSeconds(feedbackDelay);
 
         if (fader != null)
-            yield return fader.FadeOut();
+            yield return fader.FadeOutIn(StartNextLevel);
+        else
+            StartNextLevel();
+    }
 
-        StartNextLevel();
+    private void FinishSubject()
+    {
+        ScoreManager.Instance.AddTempToGlobal();
+        ScoreManager.Instance.ResetTempScore();
 
-        if (fader != null)
-            yield return fader.FadeIn();
+        SceneManager.LoadScene("SubjectMenuScene");
     }
 
     void OnDestroy()

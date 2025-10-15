@@ -8,6 +8,7 @@ public class LevelTimer : MonoBehaviour
 
     private float currentTime;
     public bool isRunning { get; private set; }
+    public bool isPaused = false;
 
     public event Action OnTimerEnded;
 
@@ -20,7 +21,7 @@ public class LevelTimer : MonoBehaviour
 
     void Update()
     {
-        if (!isRunning) return;
+       if (!isRunning || isPaused) return;
 
         currentTime -= Time.deltaTime; 
 
@@ -37,11 +38,21 @@ public class LevelTimer : MonoBehaviour
     void UpdateUI()
     {
         if (timerText != null)
-            timerText.text = Mathf.CeilToInt(currentTime).ToString(); 
+            timerText.text = ("TEMPS RESTANT: " + Mathf.CeilToInt(currentTime).ToString()); 
     }
 
     public void StopTimer()
     {
         isRunning = false;
+    }
+
+    public void PauseTimer()
+    {
+        isPaused = true;
+    }
+
+    public void ResumeTimer()
+    {
+        isPaused = false;
     }
 }

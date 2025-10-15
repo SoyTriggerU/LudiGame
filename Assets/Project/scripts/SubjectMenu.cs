@@ -8,7 +8,7 @@ public class SubjectMenu : MonoBehaviour
     public GameObject menuPanel;
 
     public void SelectMath() => SelectSubject(LevelSelector.Subject.Math);
-    public void SelectArt() => SelectSubject(LevelSelector.Subject.Art);
+    public void SelectArt() => SelectSubject(LevelSelector.Subject.English);
     public void SelectCatalan() => SelectSubject(LevelSelector.Subject.Catalan);
     public void SelectSpanish() => SelectSubject(LevelSelector.Subject.Spanish);
 

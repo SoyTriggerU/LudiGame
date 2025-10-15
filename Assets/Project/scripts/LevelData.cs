@@ -15,7 +15,7 @@ public class LevelData : ScriptableObject
     public float levelTime = 30f;
     public float visibleTime = 1.2f;
     public float riseDuration = 0.25f;
-    public float riseDistance = 120f;
+    public float riseDistance = 150f;
     public float minSpawnInterval = 0.5f;
     public float maxSpawnInterval = 1.5f;
     public int maxConcurrentVisible = 2;

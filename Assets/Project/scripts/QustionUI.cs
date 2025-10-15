@@ -23,6 +23,7 @@ public class QuestionUI : MonoBehaviour
     private Coroutine moveRoutine;
 
     public System.Action OnSlideInComplete;
+    public bool IsSlideInComplete { get; private set; } = false;
 
     void Awake()
     {
@@ -78,6 +79,7 @@ public class QuestionUI : MonoBehaviour
 
     IEnumerator SlideIn()
     {
+        IsSlideInComplete = false;
         rect.anchoredPosition = new Vector2(0, offscreenY);
 
         while (rect.anchoredPosition.y > topVisibleY)
@@ -87,7 +89,7 @@ public class QuestionUI : MonoBehaviour
         }
 
         rect.anchoredPosition = new Vector2(0, topVisibleY);
-
+        IsSlideInComplete = true;
         OnSlideInComplete?.Invoke();
     }
 

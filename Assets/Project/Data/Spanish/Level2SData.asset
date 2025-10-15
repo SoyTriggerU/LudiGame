@@ -19,9 +19,10 @@ MonoBehaviour:
   levelTime: 30
   visibleTime: 1.2
   riseDuration: 0.25
-  riseDistance: 120
+  riseDistance: 150
   minSpawnInterval: 0.5
   maxSpawnInterval: 1.5
   maxConcurrentVisible: 2
   contentsSprites: []
-  correctSpriteIndices: 
+  questions: []
+  correctSpriteIndexPerQuestion: 

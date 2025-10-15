@@ -1,11 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System;
 
 public class ScreenFader : MonoBehaviour
 {
     public Image fadeImage;
     public float fadeDuration = 1f;
+    public float blackHoldTime = 1.5f;
 
     void Awake()
     {
@@ -13,8 +15,18 @@ public class ScreenFader : MonoBehaviour
             fadeImage.color = new Color(0, 0, 0, 0);
     }
 
+    public IEnumerator FadeOutIn(Action onMidFade = null)
+    {
+        yield return FadeOut();
+        onMidFade?.Invoke();
+        yield return new WaitForSeconds(blackHoldTime);
+        yield return FadeIn();
+    }
+
     public IEnumerator FadeOut()
     {
+        if (fadeImage == null) yield break;
+
         float t = 0f;
         Color c = fadeImage.color;
 
@@ -32,6 +44,8 @@ public class ScreenFader : MonoBehaviour
 
     public IEnumerator FadeIn()
     {
+        if (fadeImage == null) yield break;
+
         float t = 0f;
         Color c = fadeImage.color;
 
