@@ -6,7 +6,7 @@ public class LevelSelector : MonoBehaviour
 {
     
     public LevelData[] MathLevels;      
-    public LevelData[] ArtLevels;      
+    public LevelData[] EnglishLevels;      
     public LevelData[] CatalanLevels;      
     public LevelData[] SpanishLevels;      
     public LevelManager levelManager;
@@ -23,7 +23,7 @@ public class LevelSelector : MonoBehaviour
             switch (currentSubject)
             {
                 case Subject.Math: return MathLevels;
-                case Subject.English: return ArtLevels;
+                case Subject.English: return EnglishLevels;
                 case Subject.Catalan: return CatalanLevels;
                 case Subject.Spanish: return SpanishLevels;
                 default: return null;

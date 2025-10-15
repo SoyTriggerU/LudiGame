@@ -19,16 +19,17 @@ MonoBehaviour:
   levelTime: 30
   visibleTime: 1.2
   riseDuration: 0.25
-  riseDistance: 150
+  riseDistance: 180
   minSpawnInterval: 0.5
   maxSpawnInterval: 1.5
   maxConcurrentVisible: 2
   contentsSprites:
-  - {fileID: -5345435871839784581, guid: 2f13bb071f4f4624f96be4eb7291fd8f, type: 3}
-  - {fileID: -3059830652048113041, guid: 40eeacdf24b1d834894bb00da93cb9cf, type: 3}
-  - {fileID: 6561858567411596728, guid: 443450a529e85d04f9b368f09a5a1a86, type: 3}
-  - {fileID: 8957850788779409619, guid: c95a91a57d5756b4ebe5a83199acfbcb, type: 3}
+  - {fileID: -4983721108374671077, guid: c77927686bf7ac14b971cab06fc01a34, type: 3}
+  - {fileID: -2799025756769327729, guid: 68fe363d2432767499d6bf1b79af5188, type: 3}
+  - {fileID: -4534634967793127557, guid: e686f3cc98f3fba438a319fc51ceb44e, type: 3}
+  - {fileID: 4359327472603921858, guid: 69e8c858226f1ac49aff19234d33bed0, type: 3}
   questions:
-  - "Nombre que comen\xE7a per la lletra q"
-  - "Quin color comen\xE7a per la lletra b?"
-  correctSpriteIndexPerQuestion: 0300000002000000
+  - "Per quina lletra comen\xE7a aquest animal? _aca"
+  - "El color _lau comen\xE7a per la letra..."
+  - "_araula comen\xE7a per..."
+  correctSpriteIndexPerQuestion: 020000000000000001000000

@@ -18,4 +18,14 @@ public class SubjectMenu : MonoBehaviour
 
         SceneManager.LoadScene("GameScene");
     }
+
+    public void GoBackToMainMenu()
+    {
+        SceneManager.LoadScene("MainScreenScene");
+    }
+
+    public void CreditScene()
+    {
+        SceneManager.LoadScene("CreditsScene");
+    }
 }

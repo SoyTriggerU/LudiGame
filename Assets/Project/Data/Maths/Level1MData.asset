@@ -19,7 +19,7 @@ MonoBehaviour:
   levelTime: 30
   visibleTime: 1.2
   riseDuration: 0.25
-  riseDistance: 150
+  riseDistance: 180
   minSpawnInterval: 0.5
   maxSpawnInterval: 1.5
   maxConcurrentVisible: 2

@@ -12,17 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616de3dbc7f688b4d98bf14589c1c117, type: 3}
   m_Name: Level2SData
   m_EditorClassIdentifier: 
-  levelName: 
-  subject: 
+  levelName: Level2
+  subject: Spanish
   spawnMode: 0
   moleCount: 4
   levelTime: 30
   visibleTime: 1.2
   riseDuration: 0.25
-  riseDistance: 150
+  riseDistance: 180
   minSpawnInterval: 0.5
   maxSpawnInterval: 1.5
   maxConcurrentVisible: 2
-  contentsSprites: []
-  questions: []
-  correctSpriteIndexPerQuestion: 
+  contentsSprites:
+  - {fileID: 1232240398260202421, guid: 5b93d9e10b1e0fe46ba6f914ebff2612, type: 3}
+  - {fileID: 3292793625578150579, guid: 7ca88f2bc5576bc4ca5c498c78872586, type: 3}
+  - {fileID: 3162568287252539508, guid: 6fa7609a4e8393b4695d008b88de9000, type: 3}
+  - {fileID: -5850107864648418528, guid: 8bfb1a13139ed5b43a846486923d08fb, type: 3}
+  questions:
+  - "Cu\xE1l de estos animales su nombre es una palabra AGUDA?"
+  - Que animal se acentua por ser una palabra LLANA y terminar en VOCAL)
+  - "Por orden alfab\xE9tico, cu\xE1l ser\xEDa el \xFAtlimo animal?"
+  correctSpriteIndexPerQuestion: 020000000100000000000000
