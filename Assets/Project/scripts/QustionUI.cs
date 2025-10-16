@@ -16,9 +16,9 @@ public class QuestionUI : MonoBehaviour
     public float offscreenY = 800f;   
     public float topVisibleY = 250f;
 
-    public Color normalColor = Color.white;
-    public Color correctColor = Color.green;
-    public Color wrongColor = Color.red;
+    public Sprite normalColor;
+    public Sprite correctColor;
+    public Sprite wrongColor;
 
     private Coroutine moveRoutine;
 
@@ -39,14 +39,14 @@ public class QuestionUI : MonoBehaviour
     {
         StopAllCoroutines();
         rect.anchoredPosition = new Vector2(0, offscreenY);
-        bubbleImage.color = normalColor;
+        bubbleImage.sprite = normalColor;
         questionText.text = "";
     }
 
     public void ShowQuestion(string question)
     {
         questionText.text = question;
-        bubbleImage.color = normalColor;
+        bubbleImage.sprite = normalColor;
         if (moveRoutine != null) StopCoroutine(moveRoutine);
         moveRoutine = StartCoroutine(SlideIn());
     }
@@ -54,7 +54,7 @@ public class QuestionUI : MonoBehaviour
     public void ShowCorrect()
     {
         if (moveRoutine != null) StopCoroutine(moveRoutine);
-        bubbleImage.color = correctColor;
+        bubbleImage.sprite = correctColor;
         moveRoutine = StartCoroutine(SlideOutCorrect());
     }
 
@@ -95,22 +95,8 @@ public class QuestionUI : MonoBehaviour
 
     IEnumerator FlashWrong()
     {
-        bubbleImage.color = wrongColor;
+        bubbleImage.sprite = wrongColor;
         yield return new WaitForSeconds(0.5f);
-        bubbleImage.color = normalColor;
-    }
-
-    IEnumerator FlashAndSlideOut(Color targetColor)
-    {
-        bubbleImage.color = targetColor;
-        yield return new WaitForSeconds(0.5f);
-
-        while (rect.anchoredPosition.y < offscreenY)
-        {
-            rect.anchoredPosition += new Vector2(0, slideSpeed * Time.deltaTime);
-            yield return null;
-        }
-
-        rect.anchoredPosition = new Vector2(0, offscreenY);
+        bubbleImage.sprite = normalColor;
     }
 }

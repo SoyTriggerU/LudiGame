@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4d42c1883d4f48a4392080459cfca6ee
+guid: 274f6fc4ba7e38d4c9706185a064869d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -491239812834939795
-    second: FlechaRetroceso_0
+      213: -6674108940378282280
+    second: IMG_1142_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FlechaRetroceso_0
+      name: IMG_1142_0
       rect:
         serializedVersion: 2
-        x: 89
-        y: 48
-        width: 556
-        height: 363
+        x: 334
+        y: 663
+        width: 1076
+        height: 377
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d6ca1703ef3ce29f0800000000000000
-      internalID: -491239812834939795
+      spriteID: 8d66e78974dc063a0800000000000000
+      internalID: -6674108940378282280
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      FlechaRetroceso_0: -491239812834939795
+      IMG_1142_0: -6674108940378282280
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
