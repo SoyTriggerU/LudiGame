@@ -8,9 +8,9 @@ public class OutOfTimeUI : MonoBehaviour
 {
     [SerializeField] private CanvasGroup canvasGroup;
     [SerializeField] private TMP_Text messageText;
-    [SerializeField] private Button restartButton;
-    [SerializeField] private Button menuButton;
-    [SerializeField] private LevelSelector levelSelector;
+    public Button restartButton;
+    public Button menuButton;
+    public LevelSelector levelSelector;
     private LevelManager levelManager;
 
     void Awake()

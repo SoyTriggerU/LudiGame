@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: Level2
   subject: Spanish
-  spawnMode: 0
+  spawnMode: 1
   moleCount: 5
   levelTime: 30
   visibleTime: 1.2

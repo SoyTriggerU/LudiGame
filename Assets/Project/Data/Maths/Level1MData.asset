@@ -16,7 +16,7 @@ MonoBehaviour:
   subject: Maths
   spawnMode: 0
   moleCount: 5
-  levelTime: 30
+  levelTime: 5
   visibleTime: 1.2
   riseDuration: 0.25
   riseDistance: 180
