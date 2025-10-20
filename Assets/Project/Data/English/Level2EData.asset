@@ -15,7 +15,7 @@ MonoBehaviour:
   levelName: Level2
   subject: English
   spawnMode: 1
-  moleCount: 4
+  moleCount: 5
   levelTime: 30
   visibleTime: 1.2
   riseDuration: 0.25
@@ -28,6 +28,7 @@ MonoBehaviour:
   - {fileID: -6418337541015408120, guid: fa6c0f4aa01f135468282ffbad7eb412, type: 3}
   - {fileID: 6977949062471825059, guid: ea68c7388316cf94fa85d9f30190115d, type: 3}
   - {fileID: -976357313166502142, guid: 0d3a70b4ddcc326489b96ef9779a4ea8, type: 3}
+  - {fileID: -5345435871839784581, guid: 2f13bb071f4f4624f96be4eb7291fd8f, type: 3}
   questions:
   - You can draw straight lines with it
   - You can erase the pencil

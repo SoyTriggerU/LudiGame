@@ -4,10 +4,10 @@ using System.Collections;
 
 public class LevelCompleteUI : MonoBehaviour
 {
-    public TMP_Text messageText;
-    public CanvasGroup canvasGroup;
-    public float fadeDuration = 0.5f;
-    public float holdTime = 2f;
+    [SerializeField] private TMP_Text messageText;
+    [SerializeField] private CanvasGroup canvasGroup;
+    [SerializeField] private float fadeDuration = 0.5f;
+    [SerializeField] private float holdTime = 2f;
 
     void Awake()
     {

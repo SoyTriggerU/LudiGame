@@ -6,12 +6,12 @@ using System.Collections;
 
 public class OutOfTimeUI : MonoBehaviour
 {
-    public CanvasGroup canvasGroup;
-    public TMP_Text messageText;
-    public Button restartButton;
-    public Button menuButton;
+    [SerializeField] private CanvasGroup canvasGroup;
+    [SerializeField] private TMP_Text messageText;
+    [SerializeField] private Button restartButton;
+    [SerializeField] private Button menuButton;
+    [SerializeField] private LevelSelector levelSelector;
     private LevelManager levelManager;
-    public LevelSelector levelSelector;
 
     void Awake()
     {

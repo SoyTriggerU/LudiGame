@@ -1,0 +1,429 @@
+fileFormatVersion: 2
+guid: 320da9b77ef2b90499a5d18a5707e9c8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1639953162741508692
+    second: MateriaNaranja_4Resets_0
+  - first:
+      213: 3508992721293518344
+    second: MateriaNaranja_4Resets_1
+  - first:
+      213: -4200529895906288495
+    second: MateriaNaranja_4Resets_2
+  - first:
+      213: 374763620083706442
+    second: MateriaNaranja_4Resets_3
+  - first:
+      213: -3843502358590434021
+    second: MateriaNaranja_4Resets_4
+  - first:
+      213: 8616918098486208384
+    second: MateriaNaranja_4Resets_5
+  - first:
+      213: -2308345810153700708
+    second: MateriaNaranja_4Resets_6
+  - first:
+      213: -942603807553306724
+    second: MateriaNaranja_4Resets_7
+  - first:
+      213: 5347849181889391047
+    second: MateriaNaranja_4Resets_8
+  - first:
+      213: 3678515739186781463
+    second: MateriaNaranja_4Resets_9
+  - first:
+      213: -9157573670940033184
+    second: MateriaNaranja_4Resets_10
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MateriaNaranja_4Resets_0
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 344
+        width: 2247
+        height: 971
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45a6c7176b842c610800000000000000
+      internalID: 1639953162741508692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MateriaNaranja_4Resets_1
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 1310
+        width: 46
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 806a120e94272b030800000000000000
+      internalID: 3508992721293518344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MateriaNaranja_4Resets_2
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 1076
+        width: 20
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19cd816a058b4b5c0800000000000000
+      internalID: -4200529895906288495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MateriaNaranja_4Resets_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 931
+        width: 55
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4a24d1e68d633500800000000000000
+      internalID: 374763620083706442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MateriaNaranja_4Resets_4
+      rect:
+        serializedVersion: 2
+        x: 2318
+        y: 959
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1557d6f7f229aac0800000000000000
+      internalID: -3843502358590434021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MateriaNaranja_4Resets_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 688
+        width: 55
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 087a7ee2b51759770800000000000000
+      internalID: 8616918098486208384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MateriaNaranja_4Resets_6
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 541
+        width: 21
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c92070f37bb17ffd0800000000000000
+      internalID: -2308345810153700708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MateriaNaranja_4Resets_7
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 348
+        width: 46
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9fbad6c4d23be2f0800000000000000
+      internalID: -942603807553306724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MateriaNaranja_4Resets_8
+      rect:
+        serializedVersion: 2
+        x: 2043
+        y: 345
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c961ee2f70673a40800000000000000
+      internalID: 5347849181889391047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MateriaNaranja_4Resets_9
+      rect:
+        serializedVersion: 2
+        x: 2054
+        y: 348
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71d59ee3396bc0330800000000000000
+      internalID: 3678515739186781463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MateriaNaranja_4Resets_10
+      rect:
+        serializedVersion: 2
+        x: 1984
+        y: 339
+        width: 45
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06f3623e343c9e080800000000000000
+      internalID: -9157573670940033184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      MateriaNaranja_4Resets_0: 1639953162741508692
+      MateriaNaranja_4Resets_1: 3508992721293518344
+      MateriaNaranja_4Resets_10: -9157573670940033184
+      MateriaNaranja_4Resets_2: -4200529895906288495
+      MateriaNaranja_4Resets_3: 374763620083706442
+      MateriaNaranja_4Resets_4: -3843502358590434021
+      MateriaNaranja_4Resets_5: 8616918098486208384
+      MateriaNaranja_4Resets_6: -2308345810153700708
+      MateriaNaranja_4Resets_7: -942603807553306724
+      MateriaNaranja_4Resets_8: 5347849181889391047
+      MateriaNaranja_4Resets_9: 3678515739186781463
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -15,7 +15,7 @@ MonoBehaviour:
   levelName: Level2
   subject: Catalan
   spawnMode: 1
-  moleCount: 4
+  moleCount: 5
   levelTime: 30
   visibleTime: 1.2
   riseDuration: 0.25
@@ -28,6 +28,7 @@ MonoBehaviour:
   - {fileID: 4359327472603921858, guid: 69e8c858226f1ac49aff19234d33bed0, type: 3}
   - {fileID: -4534634967793127557, guid: e686f3cc98f3fba438a319fc51ceb44e, type: 3}
   - {fileID: 8579111415464493206, guid: 823c7dd397cb82d4496529b961fcacdc, type: 3}
+  - {fileID: -4983721108374671077, guid: c77927686bf7ac14b971cab06fc01a34, type: 3}
   questions:
   - "El n\xFAmero _uatre comen\xE7a per la lletra..."
   - "_alentia comen\xE7a per..."

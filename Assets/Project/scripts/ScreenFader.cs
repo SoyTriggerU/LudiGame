@@ -5,9 +5,9 @@ using System;
 
 public class ScreenFader : MonoBehaviour
 {
-    public Image fadeImage;
-    public float fadeDuration = 1f;
-    public float blackHoldTime = 1.5f;
+    [SerializeField] private Image fadeImage;
+    [SerializeField] private float fadeDuration = 1f;
+    [SerializeField] private float blackHoldTime = 1.5f;
 
     void Awake()
     {

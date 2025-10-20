@@ -7,8 +7,8 @@ public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager Instance;
 
-    public TextMeshProUGUI scoreTextTemporary;
-    public TextMeshProUGUI scoreTextGlobal;
+    [SerializeField] private TextMeshProUGUI scoreTextTemporary;
+    [SerializeField] private TextMeshProUGUI scoreTextGlobal;
 
     private int tempScore = 0;
     private int globalScore = 0;
@@ -89,7 +89,7 @@ public class ScoreManager : MonoBehaviour
     private void UpdateTempUI()
     {
         if (scoreTextTemporary != null)
-            scoreTextTemporary.text = "PUNTUACIÓ: " + tempScore;
+            scoreTextTemporary.text = "" + tempScore;
     }
 
     public void AddTempToGlobal()

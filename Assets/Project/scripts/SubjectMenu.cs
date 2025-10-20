@@ -4,8 +4,8 @@ using UnityEngine.UI;
 
 public class SubjectMenu : MonoBehaviour
 {
-    public LevelSelector levelSelector;
-    public GameObject menuPanel;
+    [SerializeField] private LevelSelector levelSelector;
+    [SerializeField] private GameObject menuPanel;
 
     public void SelectMath() => SelectSubject(LevelSelector.Subject.Math);
     public void SelectArt() => SelectSubject(LevelSelector.Subject.English);

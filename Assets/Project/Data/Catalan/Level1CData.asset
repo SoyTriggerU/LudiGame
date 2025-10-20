@@ -15,7 +15,7 @@ MonoBehaviour:
   levelName: Level1
   subject: Catalan
   spawnMode: 0
-  moleCount: 4
+  moleCount: 5
   levelTime: 30
   visibleTime: 1.2
   riseDuration: 0.25
@@ -28,6 +28,7 @@ MonoBehaviour:
   - {fileID: -2799025756769327729, guid: 68fe363d2432767499d6bf1b79af5188, type: 3}
   - {fileID: -4534634967793127557, guid: e686f3cc98f3fba438a319fc51ceb44e, type: 3}
   - {fileID: 4359327472603921858, guid: 69e8c858226f1ac49aff19234d33bed0, type: 3}
+  - {fileID: 8579111415464493206, guid: 823c7dd397cb82d4496529b961fcacdc, type: 3}
   questions:
   - "Per quina lletra comen\xE7a aquest animal? _aca"
   - "El color _lau comen\xE7a per la letra..."

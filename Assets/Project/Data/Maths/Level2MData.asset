@@ -15,7 +15,7 @@ MonoBehaviour:
   levelName: Level2
   subject: Maths
   spawnMode: 1
-  moleCount: 4
+  moleCount: 5
   levelTime: 30
   visibleTime: 1.2
   riseDuration: 0.25
@@ -24,12 +24,13 @@ MonoBehaviour:
   maxSpawnInterval: 1.5
   maxConcurrentVisible: 2
   contentsSprites:
-  - {fileID: 5930387388751348050, guid: edcd9d6ce9167c24d9aca7fd31f5886a, type: 3}
-  - {fileID: 6561858567411596728, guid: 443450a529e85d04f9b368f09a5a1a86, type: 3}
   - {fileID: -5345435871839784581, guid: 2f13bb071f4f4624f96be4eb7291fd8f, type: 3}
   - {fileID: -3059830652048113041, guid: 40eeacdf24b1d834894bb00da93cb9cf, type: 3}
+  - {fileID: 8957850788779409619, guid: c95a91a57d5756b4ebe5a83199acfbcb, type: 3}
+  - {fileID: 5930387388751348050, guid: edcd9d6ce9167c24d9aca7fd31f5886a, type: 3}
+  - {fileID: 6561858567411596728, guid: 443450a529e85d04f9b368f09a5a1a86, type: 3}
   questions:
   - 2 - 1
   - 5 - 3
   - 5 - 1
-  correctSpriteIndexPerQuestion: 020000000300000000000000
+  correctSpriteIndexPerQuestion: 000000000100000003000000

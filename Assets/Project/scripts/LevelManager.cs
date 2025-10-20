@@ -6,15 +6,17 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class LevelManager : MonoBehaviour
 {
-    public RectTransform[] holeTransforms;
-    public GameObject molePrefab;
-    public Transform moleParent;
-    public LevelTimer timer;
-    public QuestionUI questionUI;
-    public LevelCompleteUI completeUI;
-    public OutOfTimeUI outOfTimeUI;
+    [SerializeField] private RectTransform[] backHoleTransforms;
+    [SerializeField] private RectTransform[] frontHoleTransforms;
+    [SerializeField] private GameObject molePrefab;
+    [SerializeField] private Transform backMoleParent;
+    [SerializeField] private Transform frontMoleParent;
+    [SerializeField] private LevelTimer timer;
+    [SerializeField] private QuestionUI questionUI;
+    [SerializeField] private LevelCompleteUI completeUI;
+    [SerializeField] private OutOfTimeUI outOfTimeUI;
 
-    public bool acceptInput = true;
+    [SerializeField] private bool acceptInput = true;
 
     List<MoleUI> moles = new List<MoleUI>();
 
@@ -78,23 +80,24 @@ public class LevelManager : MonoBehaviour
             if (m != null) Destroy(m.gameObject);
         moles.Clear();
 
-        int count = Mathf.Clamp(levelData.moleCount, 1, holeTransforms.Length);
-        for (int i = 0; i < count; i++)
+        foreach (var hole in backHoleTransforms)
         {
-            GameObject go = Instantiate(molePrefab, moleParent);
+            GameObject go = Instantiate(molePrefab, backMoleParent);
             RectTransform rt = go.GetComponent<RectTransform>();
-            rt.anchoredPosition = holeTransforms[i].anchoredPosition;
+            rt.anchoredPosition = hole.anchoredPosition;
             MoleUI mole = go.GetComponent<MoleUI>();
+            mole.Setup(null, -1, levelData.riseDistance, levelData.riseDuration);
+            mole.OnHit += OnMoleHit;
+            moles.Add(mole);
+        }
 
-            Sprite initialSprite = null;
-            int initialIndex = -1;
-            if (levelData.contentsSprites != null && levelData.contentsSprites.Length > 0)
-            {
-                initialIndex = i % levelData.contentsSprites.Length;
-                initialSprite = levelData.contentsSprites[initialIndex];
-            }
-
-            mole.Setup(initialSprite, initialIndex, levelData.riseDistance, levelData.riseDuration);
+        foreach (var hole in frontHoleTransforms)
+        {
+            GameObject go = Instantiate(molePrefab, frontMoleParent);
+            RectTransform rt = go.GetComponent<RectTransform>();
+            rt.anchoredPosition = hole.anchoredPosition;
+            MoleUI mole = go.GetComponent<MoleUI>();
+            mole.Setup(null, -1, levelData.riseDistance, levelData.riseDuration);
             mole.OnHit += OnMoleHit;
             moles.Add(mole);
         }

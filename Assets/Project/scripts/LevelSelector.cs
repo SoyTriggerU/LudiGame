@@ -4,18 +4,18 @@ using UnityEngine.SceneManagement;
 
 public class LevelSelector : MonoBehaviour
 {
-    
-    public LevelData[] MathLevels;      
-    public LevelData[] EnglishLevels;      
-    public LevelData[] CatalanLevels;      
-    public LevelData[] SpanishLevels;      
-    public LevelManager levelManager;
-    public ScreenFader fader;
-    public float feedbackDelay = 1.5f;
+
+    [SerializeField] private LevelData[] MathLevels;
+    [SerializeField] private LevelData[] EnglishLevels;      
+    [SerializeField] private LevelData[] CatalanLevels;      
+    [SerializeField] private LevelData[] SpanishLevels;      
+    [SerializeField] private LevelManager levelManager;
+    [SerializeField] private ScreenFader fader;
+    [SerializeField] private float feedbackDelay = 1.5f;
 
     private int currentLevelIndex = 0;
     public enum Subject { Math, English, Catalan, Spanish }
-    public Subject currentSubject = Subject.Math;
+    [SerializeField] private Subject currentSubject = Subject.Math;
     private LevelData[] CurrentLevels
     {
         get

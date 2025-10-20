@@ -5,7 +5,7 @@ public enum SpawnMode { Sequential, Random }
 [CreateAssetMenu(menuName = "Moles/LevelData", fileName = "LevelData")]
 public class LevelData : ScriptableObject
 {
-    public string levelName;
+    [SerializeField] private string levelName;
     public string subject;
 
     public SpawnMode spawnMode = SpawnMode.Sequential;

@@ -7,9 +7,9 @@ using System.Collections;
 [RequireComponent(typeof(RectTransform))]
 public class MoleUI : MonoBehaviour, IPointerClickHandler
 {
-    public Image moleImage; 
-    public float riseDistance = 120f;
-    public float riseDuration = 0.25f;
+    [SerializeField] private Image moleImage; 
+    [SerializeField] private float riseDistance = 120f;
+    [SerializeField] private float riseDuration = 0.25f;
 
     [HideInInspector] public int spriteIndex = -1;
 

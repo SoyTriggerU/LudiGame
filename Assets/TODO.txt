@@ -1,0 +1,23 @@
+TODO
+
+Musica:
+- Sonido menu
+- Sonido ambiental lvl
+- Sonido de acierto
+- Sonido de error
+- Sonido de nivel completado
+- Sonido de lose
+- Sonido de botón
+- Sonido de topo
+- Sonido de tap topo
+
+Arte:
+- Topo
+- Texto
+- Pantalla mainscreen
+
+Dev:
+- Arreglar spawn topos -> Algunos se buguean y saltan dos veces y luego se quedan flotando -> Debe ser pq activa dos veces el mismo sprite en el mismo lugar y ocurre esto
+- Cuando se acaba el tiempo, al reiniciar lvl se queda el tiempo congelado y a veces el game loop también
+- Que hasta que la pregunta no baje, topos desactivados -> se hace bien a partir de la segunda pero la primera vez no
+- Arreglar random, es demasiado complicado y a veces no sale una opción hasta después de mucho y el player se queda sin tiempo

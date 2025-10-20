@@ -4,11 +4,11 @@ using System;
 
 public class LevelTimer : MonoBehaviour
 {
-    public TextMeshProUGUI timerText;
+    [SerializeField] private TextMeshProUGUI timerText;
 
     private float currentTime;
     public bool isRunning { get; private set; }
-    public bool isPaused = false;
+    [SerializeField] private bool isPaused = false;
 
     public event Action OnTimerEnded;
 

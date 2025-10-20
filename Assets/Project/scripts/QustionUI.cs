@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class QuestionUI : MonoBehaviour
 {
-    public TMP_Text questionText;
-    public Image bubbleImage;
+    [SerializeField] private TMP_Text questionText;
+    [SerializeField] private Image bubbleImage;
     private RectTransform rect;
     private CanvasGroup canvasGroup;
 
@@ -16,9 +16,9 @@ public class QuestionUI : MonoBehaviour
     public float offscreenY = 800f;   
     public float topVisibleY = 250f;
 
-    public Sprite normalColor;
-    public Sprite correctColor;
-    public Sprite wrongColor;
+    [SerializeField] private Sprite normalColor;
+    [SerializeField] private Sprite correctColor;
+    [SerializeField] private Sprite wrongColor;
 
     private Coroutine moveRoutine;
 
