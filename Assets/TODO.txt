@@ -16,6 +16,3 @@ Arte:
 - Texto
 
 Dev:
-- Arreglar spawn topos -> Algunos se buguean y saltan dos veces y luego se quedan flotando -> Debe ser pq activa dos veces el mismo sprite en el mismo lugar y ocurre esto
-- Cuando se acaba el tiempo, al reiniciar lvl se queda el tiempo congelado y a veces el game loop también
-- Arreglar random, es demasiado complicado y a veces no sale una opción hasta después de mucho y el player se queda sin tiempo

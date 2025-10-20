@@ -12,6 +12,7 @@ public class MoleUI : MonoBehaviour, IPointerClickHandler
     [SerializeField] private float riseDuration = 0.25f;
 
     [HideInInspector] public int spriteIndex = -1;
+    public bool IsAnimating { get; private set; }
 
     public Action<MoleUI> OnHit;
     public Action<MoleUI> OnHidden;
@@ -45,6 +46,9 @@ public class MoleUI : MonoBehaviour, IPointerClickHandler
 
     public void PopUp(float visibleTime)
     {
+        if (state == State.Rising || state == State.Visible || state == State.Falling)
+            return;
+
         if (anim != null) StopCoroutine(anim);
         anim = StartCoroutine(PopRoutine(visibleTime));
     }
@@ -52,6 +56,8 @@ public class MoleUI : MonoBehaviour, IPointerClickHandler
     IEnumerator PopRoutine(float visibleTime)
     {
         state = State.Rising;
+        IsAnimating = true;
+
         float t = 0f;
         while (t < riseDuration)
         {
@@ -60,6 +66,7 @@ public class MoleUI : MonoBehaviour, IPointerClickHandler
             rt.anchoredPosition = Vector2.Lerp(hiddenPos, visiblePos, p);
             yield return null;
         }
+
         rt.anchoredPosition = visiblePos;
         state = State.Visible;
 
@@ -81,6 +88,7 @@ public class MoleUI : MonoBehaviour, IPointerClickHandler
         }
         rt.anchoredPosition = hiddenPos;
         state = State.Hidden;
+        IsAnimating = false;
         OnHidden?.Invoke(this);
     }
 
@@ -104,6 +112,19 @@ public class MoleUI : MonoBehaviour, IPointerClickHandler
     public bool IsVisible()
     {
         return state == State.Visible || state == State.Rising;
+    }
+
+    public void ForceHide()
+    {
+        if (anim != null)
+        {
+            StopCoroutine(anim);
+            anim = null;
+        }
+
+        rt.anchoredPosition = hiddenPos;
+        state = State.Hidden;
+        IsAnimating = false;
     }
 }
 

@@ -55,4 +55,12 @@ public class LevelTimer : MonoBehaviour
     {
         isPaused = false;
     }
+
+    public void ResetTimer(float duration)
+    {
+        currentTime = duration;
+        isRunning = false;
+        isPaused = false;
+        UpdateUI();
+    }
 }

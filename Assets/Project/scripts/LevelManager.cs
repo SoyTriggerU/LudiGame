@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.SocialPlatforms.Impl;
+using System.Linq;
 
 public class LevelManager : MonoBehaviour
 {
@@ -19,7 +20,6 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private bool acceptInput = true;
 
     List<MoleUI> moles = new List<MoleUI>();
-    private MoleUI lastSpawnedMole;
     private List<MoleUI> mustSpawnQueue = new List<MoleUI>();
 
     private LevelData levelData;
@@ -129,6 +129,8 @@ public class LevelManager : MonoBehaviour
         else
         {
             mustSpawnQueue = new List<MoleUI>(moles);
+            List<int> remainingSprites = new List<int>(Enumerable.Range(0, levelData.contentsSprites.Length));
+            MoleUI lastSpawnedMole = null;
 
             while (running)
             {
@@ -137,31 +139,27 @@ public class LevelManager : MonoBehaviour
 
                 if (concurrent < levelData.maxConcurrentVisible)
                 {
-                    List<MoleUI> hidden = moles.FindAll(x => !x.IsVisible());
+                    List<MoleUI> hidden = moles.FindAll(x => !x.IsVisible() && !x.IsAnimating);
 
                     if (hidden.Count > 0)
                     {
-                        MoleUI pick;
+                        List<MoleUI> candidates = hidden.FindAll(h => h != lastSpawnedMole);
+                        if (candidates.Count == 0) candidates = hidden;
 
-                        List<MoleUI> candidates = mustSpawnQueue.FindAll(h => hidden.Contains(h));
-                        if (candidates.Count == 0)
-                        {
-                            candidates = hidden.FindAll(h => h != lastSpawnedMole);
-                        }
-
-                        pick = candidates[Random.Range(0, candidates.Count)];
-
+                        MoleUI pick = candidates[Random.Range(0, candidates.Count)];
                         lastSpawnedMole = pick;
-                        mustSpawnQueue.Remove(pick);
 
-                        if (mustSpawnQueue.Count == 0)
-                            mustSpawnQueue = new List<MoleUI>(moles);
+                        if (remainingSprites.Count == 0)
+                            remainingSprites = new List<int>(Enumerable.Range(0, levelData.contentsSprites.Length));
+
+                        int spriteIdx = remainingSprites[Random.Range(0, remainingSprites.Count)];
+                        remainingSprites.Remove(spriteIdx);
 
                         if (levelData.contentsSprites != null && levelData.contentsSprites.Length > 0)
                         {
-                            int sIdx = Random.Range(0, levelData.contentsSprites.Length);
-                            pick.Setup(levelData.contentsSprites[sIdx], sIdx, levelData.riseDistance, levelData.riseDuration);
+                            pick.Setup(levelData.contentsSprites[spriteIdx], spriteIdx, levelData.riseDistance, levelData.riseDuration);
                         }
+
                         pick.PopUp(levelData.visibleTime);
                     }
                 }
@@ -298,15 +296,15 @@ public class LevelManager : MonoBehaviour
         {
             if (m != null)
             {
-                m.StopAllCoroutines();
+                m.ForceHide();
                 m.gameObject.SetActive(false);
-                m.Setup(null, -1, levelData.riseDistance, levelData.riseDuration);
             }
         }
 
         if (timer != null)
         {
             timer.StopTimer();
+            timer.ResetTimer(data.levelTime);
             timer.StartTimer(data.levelTime);
         }
 
@@ -316,7 +314,6 @@ public class LevelManager : MonoBehaviour
         ShowCurrentQuestion();
 
         running = true;
-        spawnRoutine = StartCoroutine(SpawnLoop());
     }
 
     void EndLevel()
