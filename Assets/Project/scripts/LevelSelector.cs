@@ -81,7 +81,6 @@ public class LevelSelector : MonoBehaviour
         var levels = CurrentLevels;
         if (levels != null && currentLevelIndex < levels.Length)
         {
-
             levelManager.RestartCurrentLevel(levels[currentLevelIndex]);
         }
     }
