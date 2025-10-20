@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 274f6fc4ba7e38d4c9706185a064869d
+guid: 7e96eea6f50d3114da81a4effcae2a4d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6674108940378282280
-    second: IMG_1142_0
+      213: -5685679202191025016
+    second: "Ni\xF1aTama\xF1oNormal (1)_0"
+  - first:
+      213: -5561004047099329943
+    second: "Ni\xF1aTama\xF1oNormal (1)_1"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -96,17 +99,43 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IMG_1142_0
+      name: "Ni\xF1aTama\xF1oNormal (1)_0"
       rect:
         serializedVersion: 2
-        x: 334
-        y: 663
-        width: 1076
-        height: 377
+        x: 200
+        y: 557
+        width: 7
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +144,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8d66e78974dc063a0800000000000000
-      internalID: -6674108940378282280
+      spriteID: 88cd39eb3e86811b0800000000000000
+      internalID: -5685679202191025016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Ni\xF1aTama\xF1oNormal (1)_1"
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 21
+        width: 882
+        height: 1568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 962822a584853d2b0800000000000000
+      internalID: -5561004047099329943
       vertices: []
       indices: 
       edges: []
@@ -125,7 +176,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +186,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      IMG_1142_0: -6674108940378282280
+      "Ni\xF1aTama\xF1oNormal (1)_0": -5685679202191025016
+      "Ni\xF1aTama\xF1oNormal (1)_1": -5561004047099329943
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

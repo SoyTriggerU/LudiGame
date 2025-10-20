@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a9caf9104cdf09945a0e91c01c5c2840
+guid: 274f6fc4ba7e38d4c9706185a064869d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8967235389517168768
-    second: original-D43A45DF-C513-41B8-AD68-2B3EDEC537DC_0
+      213: -6674108940378282280
+    second: IMG_1142_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,43 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: original-D43A45DF-C513-41B8-AD68-2B3EDEC537DC_0
+      name: IMG_1142_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 1080
+        x: 334
+        y: 663
+        width: 1076
+        height: 377
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 08f74867ceafd8380800000000000000
-      internalID: -8967235389517168768
+      spriteID: 8d66e78974dc063a0800000000000000
+      internalID: -6674108940378282280
       vertices: []
       indices: 
       edges: []
@@ -135,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      original-D43A45DF-C513-41B8-AD68-2B3EDEC537DC_0: -8967235389517168768
+      IMG_1142_0: -6674108940378282280
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

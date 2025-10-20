@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4d42c1883d4f48a4392080459cfca6ee
+guid: 6b7c4dbd539378242a3fc1fe7e5adc7f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -491239812834939795
-    second: FlechaRetroceso_0
+      213: -3123172853081661364
+    second: "Ni\xF1aTama\xF1oPeque\xF1o_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,10 +49,10 @@ TextureImporter:
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
+  alignment: 9
+  spritePivot: {x: 0.8182203, y: 0.17439024}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 1761, y: 0, z: 266, w: 1049}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -96,27 +96,53 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FlechaRetroceso_0
+      name: "Ni\xF1aTama\xF1oPeque\xF1o_0"
       rect:
         serializedVersion: 2
-        x: 89
-        y: 48
-        width: 556
-        height: 363
+        x: 1796
+        y: 34
+        width: 270
+        height: 508
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d6ca1703ef3ce29f0800000000000000
-      internalID: -491239812834939795
+      spriteID: c40acef56d248a4d0800000000000000
+      internalID: -3123172853081661364
       vertices: []
       indices: 
       edges: []
@@ -126,7 +152,7 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 0
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
@@ -135,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      FlechaRetroceso_0: -491239812834939795
+      "Ni\xF1aTama\xF1oPeque\xF1o_0": -3123172853081661364
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

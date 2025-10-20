@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1d09eff6e7e35c94bb67c42bf64d7ebb
+guid: 922657ea0f7207d459d817ab5734f2fc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3261931223058331292
-    second: "Ni\xF1aTama\xF1oNormal_0"
+      213: -7162623292716009711
+    second: "Puntuacio\u0301n_Timer_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,43 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Ni\xF1aTama\xF1oNormal_0"
+      name: "Puntuacio\u0301n_Timer_0"
       rect:
         serializedVersion: 2
-        x: 109
-        y: 0
-        width: 678
-        height: 922
+        x: 38
+        y: 728
+        width: 1986
+        height: 607
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4694ad7c5da4bb2d0800000000000000
-      internalID: -3261931223058331292
+      spriteID: 11739b18010499c90800000000000000
+      internalID: -7162623292716009711
       vertices: []
       indices: 
       edges: []
@@ -135,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "Ni\xF1aTama\xF1oNormal_0": -3261931223058331292
+      "Puntuacio\u0301n_Timer_0": -7162623292716009711
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
