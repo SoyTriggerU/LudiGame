@@ -386,7 +386,7 @@ MonoBehaviour:
   canvasGroup: {fileID: 135655669}
   fadeDuration: 0.5
   holdTime: 2
-  LevelPassedAudioSource: {fileID: 0}
+  LevelPassedAudioSource: {fileID: 1399519860}
 --- !u!222 &135655668
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -859,7 +859,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 634ff0c803092a24bad1b2df36f832b9, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3537,7 +3537,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: cc8284934bc8ab949b6f31b1909b0b28, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
