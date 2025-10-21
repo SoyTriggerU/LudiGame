@@ -16,8 +16,8 @@ MonoBehaviour:
   subject: Spanish
   spawnMode: 1
   moleCount: 5
-  levelTime: 30
-  visibleTime: 1.2
+  levelTime: 45
+  visibleTime: 2
   riseDuration: 0.25
   riseDistance: 180
   minSpawnInterval: 0.5
@@ -30,7 +30,7 @@ MonoBehaviour:
   - {fileID: -5850107864648418528, guid: 8bfb1a13139ed5b43a846486923d08fb, type: 3}
   - {fileID: -6418337541015408120, guid: fa6c0f4aa01f135468282ffbad7eb412, type: 3}
   questions:
-  - "Cu\xE1l de estos animales su nombre es una palabra AGUDA?"
-  - Que animal se acentua por ser una palabra LLANA y terminar en VOCAL)
-  - "Por orden alfab\xE9tico, cu\xE1l ser\xEDa el \xFAtlimo animal?"
+  - "CU\xC1L DE ESTOS ANIMALES SU NOMBRE ES UNA PALABRA AGUDA?"
+  - "QUE ANIMAL SE ACENT\xDAA POR SER UNA PALABRA LLANA Y TERMINAR EN VOCAL?"
+  - "POR ORDEN ALFAB\xC9TICO, CU\xC1L SER\xCDA EL \xDALTIMO ANIMAL?"
   correctSpriteIndexPerQuestion: 020000000100000000000000

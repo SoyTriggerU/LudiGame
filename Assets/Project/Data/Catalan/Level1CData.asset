@@ -16,8 +16,8 @@ MonoBehaviour:
   subject: Catalan
   spawnMode: 0
   moleCount: 5
-  levelTime: 30
-  visibleTime: 1.2
+  levelTime: 45
+  visibleTime: 2
   riseDuration: 0.25
   riseDistance: 180
   minSpawnInterval: 0.5
@@ -30,7 +30,7 @@ MonoBehaviour:
   - {fileID: 4359327472603921858, guid: 69e8c858226f1ac49aff19234d33bed0, type: 3}
   - {fileID: 8579111415464493206, guid: 823c7dd397cb82d4496529b961fcacdc, type: 3}
   questions:
-  - "Per quina lletra comen\xE7a aquest animal? _aca"
-  - "El color _lau comen\xE7a per la letra..."
-  - "_araula comen\xE7a per..."
+  - "PER QUINA LLETRA COMEN\xC7A AQUEST ANIMAL? _ACA"
+  - "EL COLOR _LAU COMEN\xC7A PER LA LETRA..."
+  - "_ARAULA COMEN\xC7A PER..."
   correctSpriteIndexPerQuestion: 020000000000000001000000

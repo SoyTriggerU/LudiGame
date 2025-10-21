@@ -129,9 +129,13 @@ public class LevelManager : MonoBehaviour
         }
         else
         {
-            mustSpawnQueue = new List<MoleUI>(moles);
-            List<int> remainingSprites = new List<int>(Enumerable.Range(0, levelData.contentsSprites.Length));
-            MoleUI lastSpawnedMole = null;
+            Dictionary<int, MoleUI> spriteToMole = new Dictionary<int, MoleUI>();
+            int maxPairs = Mathf.Min(levelData.contentsSprites.Length, moles.Count);
+            for (int i = 0; i < maxPairs; i++)
+                spriteToMole[i] = moles[i];
+
+            List<int> spriteQueue = new List<int>(Enumerable.Range(0, maxPairs));
+            ShuffleList(spriteQueue);
 
             while (running)
             {
@@ -140,25 +144,51 @@ public class LevelManager : MonoBehaviour
 
                 if (concurrent < levelData.maxConcurrentVisible)
                 {
-                    List<MoleUI> hidden = moles.FindAll(x => !x.IsVisible() && !x.IsAnimating);
-
-                    if (hidden.Count > 0)
+                    if (spriteQueue.Count == 0)
                     {
-                        List<MoleUI> candidates = hidden.FindAll(h => h != lastSpawnedMole);
-                        if (candidates.Count == 0) candidates = hidden;
+                        yield return new WaitUntil(() => {
+                            foreach (var mm in moles) if (mm.IsVisible()) return false;
+                            return true;
+                        });
 
-                        MoleUI pick = candidates[Random.Range(0, candidates.Count)];
-                        lastSpawnedMole = pick;
+                        spriteQueue = new List<int>(Enumerable.Range(0, maxPairs));
+                        ShuffleList(spriteQueue);
+                    }
 
-                        if (remainingSprites.Count == 0)
-                            remainingSprites = new List<int>(Enumerable.Range(0, levelData.contentsSprites.Length));
+                    int chosenIndexInQueue = -1;
+                    for (int i = 0; i < spriteQueue.Count; i++)
+                    {
+                        int s = spriteQueue[i];
+                        if (spriteToMole.TryGetValue(s, out var candidateMole))
+                        {
+                            if (!candidateMole.IsVisible())
+                            {
+                                chosenIndexInQueue = i;
+                                break;
+                            }
+                        }
+                    }
 
-                        int spriteIdx = remainingSprites[Random.Range(0, remainingSprites.Count)];
-                        remainingSprites.Remove(spriteIdx);
+                    if (chosenIndexInQueue == -1)
+                    {
+                        yield return null;
+                        continue;
+                    }
 
-                        if (levelData.contentsSprites != null && levelData.contentsSprites.Length > 0)
+                    int spriteIdx = spriteQueue[chosenIndexInQueue];
+                    spriteQueue.RemoveAt(chosenIndexInQueue);
+
+                    if (spriteToMole.TryGetValue(spriteIdx, out MoleUI pick))
+                    {
+                        if (levelData.contentsSprites != null && levelData.contentsSprites.Length > spriteIdx)
                         {
                             pick.Setup(levelData.contentsSprites[spriteIdx], spriteIdx, levelData.riseDistance, levelData.riseDuration);
+                        }
+
+                        if (pick.IsVisible() || pick.IsAnimating)
+                        {
+                            pick.ForceHide();
+                            yield return new WaitForSeconds(0.05f);
                         }
 
                         pick.PopUp(levelData.visibleTime);
@@ -171,6 +201,26 @@ public class LevelManager : MonoBehaviour
         }
 
         EndLevel();
+    }
+
+    private void ShuffleList<T>(List<T> list)
+    {
+        for (int i = 0; i < list.Count; i++)
+        {
+            int r = Random.Range(i, list.Count);
+            T tmp = list[i];
+            list[i] = list[r];
+            list[r] = tmp;
+        }
+    }
+
+    void ForceHideAllMoles()
+    {
+        foreach (var m in moles)
+        {
+            if (m != null)
+                m.ForceHide();
+        }
     }
 
     private IEnumerator StartTimerWithDelay(float delay)
@@ -215,6 +265,7 @@ public class LevelManager : MonoBehaviour
         {
             acceptInput = false;
             PauseSpawnLoop();
+            ForceHideAllMoles();
             SetMolesActive(false);
 
             if (timer != null)

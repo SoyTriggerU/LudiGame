@@ -16,8 +16,8 @@ MonoBehaviour:
   subject: Catalan
   spawnMode: 1
   moleCount: 5
-  levelTime: 30
-  visibleTime: 1.2
+  levelTime: 45
+  visibleTime: 2
   riseDuration: 0.25
   riseDistance: 180
   minSpawnInterval: 0.5

@@ -106,6 +106,7 @@ public class LevelSelector : MonoBehaviour
         ScoreManager.Instance.ResetTempScore();
 
         SceneManager.LoadScene("SubjectMenuScene");
+        MusicManager.Instance.PlayLastMenuMusic();
     }
 
     public void ReturnButton()

@@ -1224,8 +1224,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "PUNTUACI\xD3: 0"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 20fc55fec0c3e1a48bf4bb7b2b529c54, type: 2}
-  m_sharedMaterial: {fileID: -6429280025787990619, guid: 20fc55fec0c3e1a48bf4bb7b2b529c54, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b5f2c060abc8627488373311011fef91, type: 2}
+  m_sharedMaterial: {fileID: 34046644834020976, guid: b5f2c060abc8627488373311011fef91, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1249,8 +1249,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35
-  m_fontSizeBase: 35
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1380,7 +1380,7 @@ MonoBehaviour:
   m_text: "ANGL\xC8S"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 20fc55fec0c3e1a48bf4bb7b2b529c54, type: 2}
-  m_sharedMaterial: {fileID: -6429280025787990619, guid: 20fc55fec0c3e1a48bf4bb7b2b529c54, type: 2}
+  m_sharedMaterial: {fileID: 5579623496637401932, guid: 20fc55fec0c3e1a48bf4bb7b2b529c54, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1404,10 +1404,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 72
+  m_fontSizeBase: 50
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -1649,7 +1649,7 @@ MonoBehaviour:
   m_text: "MATEM\xC0TIQUES"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 20fc55fec0c3e1a48bf4bb7b2b529c54, type: 2}
-  m_sharedMaterial: {fileID: -6429280025787990619, guid: 20fc55fec0c3e1a48bf4bb7b2b529c54, type: 2}
+  m_sharedMaterial: {fileID: 5579623496637401932, guid: 20fc55fec0c3e1a48bf4bb7b2b529c54, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1673,8 +1673,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1785,7 +1785,7 @@ MonoBehaviour:
   m_text: "CASTELL\xC0"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 20fc55fec0c3e1a48bf4bb7b2b529c54, type: 2}
-  m_sharedMaterial: {fileID: -6429280025787990619, guid: 20fc55fec0c3e1a48bf4bb7b2b529c54, type: 2}
+  m_sharedMaterial: {fileID: 5579623496637401932, guid: 20fc55fec0c3e1a48bf4bb7b2b529c54, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1809,10 +1809,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
+  m_fontSize: 72
   m_fontSizeBase: 45
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -1921,7 +1921,7 @@ MonoBehaviour:
   m_text: "CATAL\xC0"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 20fc55fec0c3e1a48bf4bb7b2b529c54, type: 2}
-  m_sharedMaterial: {fileID: -6429280025787990619, guid: 20fc55fec0c3e1a48bf4bb7b2b529c54, type: 2}
+  m_sharedMaterial: {fileID: 5579623496637401932, guid: 20fc55fec0c3e1a48bf4bb7b2b529c54, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1945,10 +1945,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
+  m_fontSize: 72
   m_fontSizeBase: 45
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0

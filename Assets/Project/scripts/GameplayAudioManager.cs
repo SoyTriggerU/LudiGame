@@ -12,6 +12,8 @@ public class BackgroundAudioManager : MonoBehaviour
     [SerializeField] private float fadeInDuration = 2f;
     [SerializeField] private float startDelay = 1f;
 
+    public static BackgroundAudioManager Instance { get; private set; }
+
     void Start()
     {
         if (MusicManager.Instance != null)
@@ -22,16 +24,16 @@ public class BackgroundAudioManager : MonoBehaviour
 
     private IEnumerator FadeInGameplayMusic()
     {
-        if (startDelay > 0f)
+        if (startDelay > 0.0f)
             yield return new WaitForSeconds(startDelay);
 
         float baseTarget = baseSource.volume;
         float amb1Target = ambientSource1.volume;
         float amb2Target = ambientSource2.volume;
 
-        baseSource.volume = 0f;
-        ambientSource1.volume = 0f;
-        ambientSource2.volume = 0f;
+        baseSource.volume = 0.0f;
+        ambientSource1.volume = 0.0f;
+        ambientSource2.volume = 0.0f;
 
         baseSource.Play();
         ambientSource1.Play();
@@ -53,12 +55,5 @@ public class BackgroundAudioManager : MonoBehaviour
         baseSource.volume = baseTarget;
         ambientSource1.volume = amb1Target;
         ambientSource2.volume = amb2Target;
-    }
-
-    public void StopGameplayMusic()
-    {
-        baseSource.Stop();
-        ambientSource1.Stop();
-        ambientSource2.Stop();
     }
 }

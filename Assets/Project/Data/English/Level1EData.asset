@@ -16,8 +16,8 @@ MonoBehaviour:
   subject: English
   spawnMode: 0
   moleCount: 5
-  levelTime: 30
-  visibleTime: 1.2
+  levelTime: 45
+  visibleTime: 2
   riseDuration: 0.25
   riseDistance: 180
   minSpawnInterval: 0.5
@@ -30,7 +30,7 @@ MonoBehaviour:
   - {fileID: 6977949062471825059, guid: ea68c7388316cf94fa85d9f30190115d, type: 3}
   - {fileID: -5345435871839784581, guid: 2f13bb071f4f4624f96be4eb7291fd8f, type: 3}
   questions:
-  - Choose the pencil
-  - Choose the rubber
-  - Choose the ruler
+  - CHOOSE THE PENCIL
+  - CHOOSE THE RUBBER
+  - CHOOSE THE RULER
   correctSpriteIndexPerQuestion: 000000000300000002000000

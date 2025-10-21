@@ -16,8 +16,8 @@ MonoBehaviour:
   subject: Spanish
   spawnMode: 0
   moleCount: 5
-  levelTime: 30
-  visibleTime: 1.2
+  levelTime: 45
+  visibleTime: 2
   riseDuration: 0.25
   riseDistance: 180
   minSpawnInterval: 0.5
@@ -30,7 +30,7 @@ MonoBehaviour:
   - {fileID: 3292793625578150579, guid: 7ca88f2bc5576bc4ca5c498c78872586, type: 3}
   - {fileID: -6418337541015408120, guid: fa6c0f4aa01f135468282ffbad7eb412, type: 3}
   questions:
-  - Empieza con la letra V
-  - Empieza con la letra Z
-  - Empieza por la letra B
+  - EMPIEZA POR LA LETRA V
+  - EMPIEZA POR LA LETRA Z
+  - EMPIEZA POR LA LETRA B
   correctSpriteIndexPerQuestion: 000000000100000003000000

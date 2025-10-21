@@ -46,8 +46,8 @@ public class MoleUI : MonoBehaviour, IPointerClickHandler
 
     public void PopUp(float visibleTime)
     {
-        if (state == State.Rising || state == State.Visible || state == State.Falling)
-            return;
+        if (state != State.Hidden)
+            ForceHide();
 
         if (anim != null) StopCoroutine(anim);
         anim = StartCoroutine(PopRoutine(visibleTime));
@@ -55,6 +55,12 @@ public class MoleUI : MonoBehaviour, IPointerClickHandler
 
     IEnumerator PopRoutine(float visibleTime)
     {
+        if (anim != null)
+        {
+            StopCoroutine(anim);
+            anim = null;
+        }
+
         state = State.Rising;
         IsAnimating = true;
 
@@ -86,9 +92,11 @@ public class MoleUI : MonoBehaviour, IPointerClickHandler
             rt.anchoredPosition = Vector2.Lerp(visiblePos, hiddenPos, p);
             yield return null;
         }
+
         rt.anchoredPosition = hiddenPos;
         state = State.Hidden;
         IsAnimating = false;
+        anim = null;
         OnHidden?.Invoke(this);
     }
 

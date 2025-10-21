@@ -16,8 +16,8 @@ MonoBehaviour:
   subject: English
   spawnMode: 1
   moleCount: 5
-  levelTime: 30
-  visibleTime: 1.2
+  levelTime: 45
+  visibleTime: 2
   riseDuration: 0.25
   riseDistance: 180
   minSpawnInterval: 0.5
@@ -30,7 +30,7 @@ MonoBehaviour:
   - {fileID: -976357313166502142, guid: 0d3a70b4ddcc326489b96ef9779a4ea8, type: 3}
   - {fileID: -5345435871839784581, guid: 2f13bb071f4f4624f96be4eb7291fd8f, type: 3}
   questions:
-  - You can draw straight lines with it
-  - You can erase the pencil
-  - It can't be erased
+  - YOU CAN DRAW STRAIGHT LINES WITH IT
+  - YOU CAN ERASE THE PENCIL
+  - IT CAN'T BE ERASED
   correctSpriteIndexPerQuestion: 030000000200000000000000

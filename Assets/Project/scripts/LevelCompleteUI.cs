@@ -21,6 +21,8 @@ public class LevelCompleteUI : MonoBehaviour
         LevelPassedAudioSource.Play();
         messageText.text = message;
 
+       
+
         float t = 0;
         while (t < fadeDuration)
         {
