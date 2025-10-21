@@ -20,6 +20,9 @@ public class QuestionUI : MonoBehaviour
     [SerializeField] private Sprite correctColor;
     [SerializeField] private Sprite wrongColor;
 
+    [SerializeField] private AudioSource CorrectAnswerAudio;
+    [SerializeField] private AudioSource WrongAnswerAudio;
+
     private Coroutine moveRoutine;
 
     public System.Action OnSlideInComplete;
@@ -54,6 +57,7 @@ public class QuestionUI : MonoBehaviour
     public void ShowCorrect()
     {
         if (moveRoutine != null) StopCoroutine(moveRoutine);
+        CorrectAnswerAudio.Play();
         bubbleImage.sprite = correctColor;
         moveRoutine = StartCoroutine(SlideOutCorrect());
     }
@@ -74,6 +78,7 @@ public class QuestionUI : MonoBehaviour
     public void ShowWrong()
     {
         if (moveRoutine != null) StopCoroutine(moveRoutine);
+        WrongAnswerAudio.Play();
         StartCoroutine(FlashWrong());
     }
 

@@ -1,13 +1,30 @@
 TODO
 
 Musica:
-- Sonido menu
 - Sonido ambiental lvl
+Music by Limujii from freetouse
+Sound Effect by Semen Surin from Pixabay
+
+
 - Sonido de acierto
-- Sonido de error
+Sound Effect by Sophia Conçeição from Pixabay
+
 - Sonido de nivel completado
+Sound Effect from mixkit
+
+- Sonido menu
+Music by Yevgeniy Sorokin from Pixabay
+
+- Sonido de error
+Sound Effect by Shagor Miah from Pixabay
+
 - Sonido de lose
+Sound Effect from mixkit
+Sound Effect by Universfield from Pixabay
+
 - Sonido de botón
+Sound Effect by Emiliano Dleon from Pixabay
+
 - Sonido de topo
 - Sonido de tap topo
 

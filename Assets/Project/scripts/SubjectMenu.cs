@@ -14,18 +14,20 @@ public class SubjectMenu : MonoBehaviour
 
     private void SelectSubject(LevelSelector.Subject subject)
     {
+        ClickSoundManager.Instance.PlayClick();
         GameManager.Instance.selectedSubject = subject;
-
         SceneManager.LoadScene("GameScene");
     }
 
     public void GoBackToMainMenu()
     {
+        ClickSoundManager.Instance.PlayClick();
         SceneManager.LoadScene("MainScreenScene");
     }
 
     public void CreditScene()
     {
+        ClickSoundManager.Instance.PlayClick();
         SceneManager.LoadScene("CreditsScene");
     }
 }

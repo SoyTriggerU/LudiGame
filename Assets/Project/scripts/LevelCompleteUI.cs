@@ -8,6 +8,7 @@ public class LevelCompleteUI : MonoBehaviour
     [SerializeField] private CanvasGroup canvasGroup;
     [SerializeField] private float fadeDuration = 0.5f;
     [SerializeField] private float holdTime = 2f;
+    [SerializeField] private AudioSource LevelPassedAudioSource;
 
     void Awake()
     {
@@ -17,6 +18,7 @@ public class LevelCompleteUI : MonoBehaviour
 
     public IEnumerator ShowMessage(string message)
     {
+        LevelPassedAudioSource.Play();
         messageText.text = message;
 
         float t = 0;

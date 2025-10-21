@@ -7,6 +7,7 @@ public class MainMenuUI : MonoBehaviour
     [SerializeField] private Button playButton;
     [SerializeField] private Button exitButton;
     [SerializeField] private Button creditsButton;
+    [SerializeField] private AudioSource audioSource;
 
     void Start()
     {
@@ -22,16 +23,19 @@ public class MainMenuUI : MonoBehaviour
 
     void OnPlayClicked()
     {
+        ClickSoundManager.Instance.PlayClick();
         SceneManager.LoadScene("SubjectMenuScene");
     }
 
     void OnCreditsClicked()
     {
+        ClickSoundManager.Instance.PlayClick();
         SceneManager.LoadScene("CreditsScene");
     }
 
     void OnExitClicked()
     {
+        ClickSoundManager.Instance.PlayClick();
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else

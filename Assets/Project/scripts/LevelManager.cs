@@ -76,6 +76,7 @@ public class LevelManager : MonoBehaviour
 
         questionUI.ShowQuestion(levelData.questions[currentQuestionIndex]);
     }
+
     void PrepareMoles()
     {
         foreach (var m in moles)
@@ -308,12 +309,9 @@ public class LevelManager : MonoBehaviour
             timer.StartTimer(data.levelTime);
         }
 
-        currentQuestionIndex = 0;
         acceptInput = false;
 
-        ShowCurrentQuestion();
-
-        running = true;
+        StartLevel(data);
     }
 
     void EndLevel()

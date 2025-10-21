@@ -108,6 +108,17 @@ public class LevelSelector : MonoBehaviour
         SceneManager.LoadScene("SubjectMenuScene");
     }
 
+    public void ReturnButton()
+    {
+        ClickSoundManager.Instance.PlayClick();
+        MusicManager.Instance.PlayLastMenuMusic();
+
+        ScoreManager.Instance.AddTempToGlobal();
+        ScoreManager.Instance.ResetTempScore();
+
+        SceneManager.LoadScene("SubjectMenuScene");
+    }
+
     void OnDestroy()
     {
         if (levelManager != null)

@@ -13,6 +13,9 @@ public class OutOfTimeUI : MonoBehaviour
     public LevelSelector levelSelector;
     private LevelManager levelManager;
 
+    [SerializeField] private AudioSource outOfTimeAudioSource;
+    [SerializeField] private AudioSource GameOverSource;
+
     void Awake()
     {
         if (canvasGroup == null)
@@ -33,6 +36,15 @@ public class OutOfTimeUI : MonoBehaviour
         gameObject.SetActive(true);
         messageText.text = "S'HA ACABAT EL TEMPS!";
         StartCoroutine(FadeIn());
+        StartCoroutine(PlayGameOverSounds());
+    }
+
+    private IEnumerator PlayGameOverSounds()
+    {
+        outOfTimeAudioSource.Play();
+        yield return new WaitForSeconds(outOfTimeAudioSource.clip.length);
+
+        GameOverSource.Play();
     }
 
     IEnumerator FadeIn()
@@ -49,6 +61,8 @@ public class OutOfTimeUI : MonoBehaviour
 
     void RestartLevel()
     {
+        ClickSoundManager.Instance.PlayClick();
+
         if (levelSelector != null)
         {
             levelSelector.RestartCurrentLevel();
