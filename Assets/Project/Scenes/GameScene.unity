@@ -876,10 +876,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
+  m_fontSize: 35.85
   m_fontSizeBase: 50
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -3760,7 +3760,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'TEMPS RESTANT : 45'
+  m_text: 'TEMPS RESTANT: 45'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b5f2c060abc8627488373311011fef91, type: 2}
   m_sharedMaterial: {fileID: 34046644834020976, guid: b5f2c060abc8627488373311011fef91, type: 2}
@@ -4351,7 +4351,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: RESTART
+  m_text: REINTENTAR
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 20fc55fec0c3e1a48bf4bb7b2b529c54, type: 2}
   m_sharedMaterial: {fileID: 5579623496637401932, guid: 20fc55fec0c3e1a48bf4bb7b2b529c54, type: 2}

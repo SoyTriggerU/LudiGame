@@ -30,7 +30,7 @@ MonoBehaviour:
   - {fileID: 1890989661803041374, guid: 9e8825f80d140dc4fad8a4e00e1dc6b6, type: 3}
   - {fileID: -4708220382404557354, guid: cb72debef84a80546a03ff6804c29da3, type: 3}
   questions:
-  - "LA PARAULA CA_OLA \xC9S AMB"
-  - LA PARAULA DOT_ENA S'ESCRIU AMB
-  - LA PARAULA LLAPI_ ACABA AMB
+  - CA_OLA
+  - DOT_ENA
+  - LLAPI_
   correctSpriteIndexPerQuestion: 040000000200000001000000
