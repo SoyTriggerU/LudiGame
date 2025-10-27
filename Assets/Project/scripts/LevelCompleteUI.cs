@@ -17,6 +17,9 @@ public class LevelCompleteUI : MonoBehaviour
 
     public IEnumerator ShowMessage()
     {
+        if (SoundSettingsManager.Instance != null)
+            SoundSettingsManager.Instance.RegisterSFXSource(LevelPassedAudioSource);
+
         LevelPassedAudioSource.Play();
 
         float t = 0;

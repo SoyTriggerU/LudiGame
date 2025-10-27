@@ -19,6 +19,13 @@ public class BackgroundAudioManager : MonoBehaviour
         if (MusicManager.Instance != null)
             MusicManager.Instance.StopMusic();
 
+        if (SoundSettingsManager.Instance != null)
+        {
+            SoundSettingsManager.Instance.RegisterMusicSource(baseSource);
+            SoundSettingsManager.Instance.RegisterMusicSource(ambientSource1);
+            SoundSettingsManager.Instance.RegisterMusicSource(ambientSource2);
+        }
+
         StartCoroutine(FadeInGameplayMusic());
     }
 

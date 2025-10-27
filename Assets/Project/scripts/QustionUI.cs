@@ -57,6 +57,8 @@ public class QuestionUI : MonoBehaviour
     public void ShowCorrect()
     {
         if (moveRoutine != null) StopCoroutine(moveRoutine);
+        if (SoundSettingsManager.Instance != null)
+            SoundSettingsManager.Instance.RegisterSFXSource(CorrectAnswerAudio);
         CorrectAnswerAudio.Play();
         bubbleImage.sprite = correctColor;
         moveRoutine = StartCoroutine(SlideOutCorrect());
@@ -78,6 +80,8 @@ public class QuestionUI : MonoBehaviour
     public void ShowWrong()
     {
         if (moveRoutine != null) StopCoroutine(moveRoutine);
+        if (SoundSettingsManager.Instance != null)
+            SoundSettingsManager.Instance.RegisterSFXSource(WrongAnswerAudio);
         WrongAnswerAudio.Play();
         StartCoroutine(FlashWrong());
     }

@@ -41,6 +41,12 @@ public class OutOfTimeUI : MonoBehaviour
 
     private IEnumerator PlayGameOverSounds()
     {
+        if (SoundSettingsManager.Instance != null)
+        {
+            SoundSettingsManager.Instance.RegisterSFXSource(outOfTimeAudioSource);
+            SoundSettingsManager.Instance.RegisterSFXSource(GameOverSource);
+        }
+
         outOfTimeAudioSource.Play();
         yield return new WaitForSeconds(outOfTimeAudioSource.clip.length);
 

@@ -1,10 +1,11 @@
 using UnityEngine;
+using static UnityEngine.SpriteMask;
 
 public class ClickSoundManager : MonoBehaviour
 {
     public static ClickSoundManager Instance;
 
-    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioSource clickSound;
 
     void Awake()
     {
@@ -21,9 +22,12 @@ public class ClickSoundManager : MonoBehaviour
 
     public void PlayClick()
     {
-        if (audioSource != null && audioSource.clip != null)
+        if (clickSound != null && clickSound.clip != null)
         {
-            audioSource.PlayOneShot(audioSource.clip);
+            if (SoundSettingsManager.Instance != null)
+                SoundSettingsManager.Instance.RegisterSFXSource(clickSound);
+
+            clickSound.PlayOneShot(clickSound.clip);
         }
     }
 }
