@@ -1,10 +1,11 @@
 TODO
 ART:
 scrollbar
+sprites colores primer lvl ingles
 
 Dev:
 poner menu settings para audio
-
+arreglar canvas -> usar masks con agujeros fuera parte del fondo
 
 
 
