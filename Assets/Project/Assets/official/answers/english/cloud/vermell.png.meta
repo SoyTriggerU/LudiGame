@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: e20f82942b572194085a503ab7ad97ce
+guid: 862af803170e2fd4a8dd325f6833c92a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7336805681979244506
-    second: pen_0
+      213: 1659615260941066546
+    second: vermell_0
+  - first:
+      213: -9042614572443510829
+    second: vermell_1
+  - first:
+      213: -5621073328645711186
+    second: vermell_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pen_0
+      name: vermell_0
       rect:
         serializedVersion: 2
-        x: 76
-        y: 32
-        width: 208
-        height: 296
+        x: 260
+        y: 362
+        width: 570
+        height: 609
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6204f83ba1e6e2a90800000000000000
-      internalID: -7336805681979244506
+      spriteID: 231a53c6943280710800000000000000
+      internalID: 1659615260941066546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vermell_1
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 347
+        width: 557
+        height: 653
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d7dbb8c4fd228280800000000000000
+      internalID: -9042614572443510829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vermell_2
+      rect:
+        serializedVersion: 2
+        x: 1499
+        y: 345
+        width: 563
+        height: 677
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaa56add69fedf1b0800000000000000
+      internalID: -5621073328645711186
       vertices: []
       indices: 
       edges: []
@@ -135,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      pen_0: -7336805681979244506
+      vermell_0: 1659615260941066546
+      vermell_1: -9042614572443510829
+      vermell_2: -5621073328645711186
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

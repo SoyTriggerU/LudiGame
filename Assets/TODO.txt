@@ -1,13 +1,8 @@
 TODO
-
-
-
-Arte:
-- Topos catalan y ingles
+ART:
+scrollbar
 
 Dev:
-ARREGLAR FADE (NO APARECE)
-quitar boton de exit en el main screen
 poner menu settings para audio
 
 

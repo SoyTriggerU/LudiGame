@@ -16,7 +16,7 @@ MonoBehaviour:
   subject: English
   spawnMode: 1
   moleCount: 5
-  levelTime: 45
+  levelTime: 10
   visibleTime: 2
   riseDuration: 0.25
   riseDistance: 250

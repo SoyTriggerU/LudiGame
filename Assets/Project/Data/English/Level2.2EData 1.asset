@@ -16,7 +16,7 @@ MonoBehaviour:
   subject: English
   spawnMode: 1
   moleCount: 5
-  levelTime: 45
+  levelTime: 10
   visibleTime: 2
   riseDuration: 0.25
   riseDistance: 250
@@ -24,11 +24,11 @@ MonoBehaviour:
   maxSpawnInterval: 1.5
   maxConcurrentVisible: 2
   contentsSprites:
-  - {fileID: -7336805681979244506, guid: e20f82942b572194085a503ab7ad97ce, type: 3}
-  - {fileID: -6418337541015408120, guid: fa6c0f4aa01f135468282ffbad7eb412, type: 3}
-  - {fileID: 6977949062471825059, guid: ea68c7388316cf94fa85d9f30190115d, type: 3}
-  - {fileID: -976357313166502142, guid: 0d3a70b4ddcc326489b96ef9779a4ea8, type: 3}
-  - {fileID: -5345435871839784581, guid: 2f13bb071f4f4624f96be4eb7291fd8f, type: 3}
+  - {fileID: 6620433998205069784, guid: 44ffe0b7b362451459b2da6e2234e2a6, type: 3}
+  - {fileID: -3829602434738410559, guid: 98d5cc9e71829504f9c81128ae0033bf, type: 3}
+  - {fileID: -7944644373998038830, guid: bc13cc7de7a9f994780b51da23e805d7, type: 3}
+  - {fileID: 6380269698397281155, guid: cae77b194b872c3468a67635540c54e0, type: 3}
+  - {fileID: -5621073328645711186, guid: 862af803170e2fd4a8dd325f6833c92a, type: 3}
   questions:
-  - THE COLOR OF CHOCOLATE IS...
+  - THE COLOR OF A CLOUD IS...
   correctSpriteIndexPerQuestion: 03000000

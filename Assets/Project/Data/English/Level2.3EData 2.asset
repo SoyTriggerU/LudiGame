@@ -16,7 +16,7 @@ MonoBehaviour:
   subject: English
   spawnMode: 1
   moleCount: 5
-  levelTime: 45
+  levelTime: 10
   visibleTime: 2
   riseDuration: 0.25
   riseDistance: 250
@@ -24,11 +24,11 @@ MonoBehaviour:
   maxSpawnInterval: 1.5
   maxConcurrentVisible: 2
   contentsSprites:
-  - {fileID: -7336805681979244506, guid: e20f82942b572194085a503ab7ad97ce, type: 3}
-  - {fileID: -6418337541015408120, guid: fa6c0f4aa01f135468282ffbad7eb412, type: 3}
-  - {fileID: 6977949062471825059, guid: ea68c7388316cf94fa85d9f30190115d, type: 3}
-  - {fileID: -976357313166502142, guid: 0d3a70b4ddcc326489b96ef9779a4ea8, type: 3}
-  - {fileID: -5345435871839784581, guid: 2f13bb071f4f4624f96be4eb7291fd8f, type: 3}
+  - {fileID: -5133061747494555038, guid: db34fe3b2cb4bf34badd9c2440d80b01, type: 3}
+  - {fileID: 2307127749054859705, guid: 33bdf306d37017c4abf07be4c55c3403, type: 3}
+  - {fileID: 6620433998205069784, guid: d1e5c43257f7e2e4695c1e151da03712, type: 3}
+  - {fileID: -8056894114552439785, guid: c7da80fd5d29bd84dbac2137195d8a79, type: 3}
+  - {fileID: -919222818848966022, guid: 8bcd7ca6bfe8fe0498567fd45479edfa, type: 3}
   questions:
   - THE COLOR OF THE HEART IS...
-  correctSpriteIndexPerQuestion: 02000000
+  correctSpriteIndexPerQuestion: 04000000

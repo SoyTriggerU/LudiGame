@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: fa6c0f4aa01f135468282ffbad7eb412
+guid: cae77b194b872c3468a67635540c54e0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6418337541015408120
-    second: pencil_0
+      213: -3359323292139578904
+    second: blanc_0
+  - first:
+      213: 6380269698397281155
+    second: blanc_1
+  - first:
+      213: 455904708856128049
+    second: blanc_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pencil_0
+      name: blanc_0
       rect:
         serializedVersion: 2
-        x: 39
-        y: 36
-        width: 281
-        height: 286
+        x: 260
+        y: 362
+        width: 570
+        height: 609
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 802f833230c7de6a0800000000000000
-      internalID: -6418337541015408120
+      spriteID: 8e91356a3494161d0800000000000000
+      internalID: -3359323292139578904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blanc_1
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 347
+        width: 557
+        height: 653
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38b98209c754b8850800000000000000
+      internalID: 6380269698397281155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blanc_2
+      rect:
+        serializedVersion: 2
+        x: 1499
+        y: 345
+        width: 563
+        height: 677
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1322ccecae2b35600800000000000000
+      internalID: 455904708856128049
       vertices: []
       indices: 
       edges: []
@@ -135,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      pencil_0: -6418337541015408120
+      blanc_0: -3359323292139578904
+      blanc_1: 6380269698397281155
+      blanc_2: 455904708856128049
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

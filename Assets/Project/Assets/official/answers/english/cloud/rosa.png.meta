@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 443450a529e85d04f9b368f09a5a1a86
+guid: 98d5cc9e71829504f9c81128ae0033bf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6561858567411596728
-    second: educational-cartoon-numbers-set-with-fruits-vector-3.png_0
+      213: -3441245182132240607
+    second: rosa_0
+  - first:
+      213: 340419253908351282
+    second: rosa_1
+  - first:
+      213: -3829602434738410559
+    second: rosa_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: educational-cartoon-numbers-set-with-fruits-vector-3.png_0
+      name: rosa_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 2
-        width: 140
-        height: 246
+        x: 260
+        y: 362
+        width: 570
+        height: 609
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8bdfbe0d997601b50800000000000000
-      internalID: 6561858567411596728
+      spriteID: 12fbbf54dbd3e30d0800000000000000
+      internalID: -3441245182132240607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rosa_1
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 347
+        width: 557
+        height: 653
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23929eff18969b400800000000000000
+      internalID: 340419253908351282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rosa_2
+      rect:
+        serializedVersion: 2
+        x: 1499
+        y: 345
+        width: 563
+        height: 677
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cb227e20e48adac0800000000000000
+      internalID: -3829602434738410559
       vertices: []
       indices: 
       edges: []
@@ -135,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      educational-cartoon-numbers-set-with-fruits-vector-3.png_0: 6561858567411596728
+      rosa_0: -3441245182132240607
+      rosa_1: 340419253908351282
+      rosa_2: -3829602434738410559
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
