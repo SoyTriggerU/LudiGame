@@ -1,6 +1,26 @@
 TODO
 
-Musica:
+
+
+Arte:
+- Topos catalan y ingles
+
+Dev:
+acabar de cambiar lvls
+ARREGLAR FADE (NO APARECE)
+quitar boton de exit en el main screen
+poner menu settings para audio
+
+
+
+
+
+
+
+
+
+
+CREDITOS:
 - Sonido ambiental lvl
 Music by Limujii from freetouse
 Sound Effect by Semen Surin from Pixabay
@@ -24,12 +44,3 @@ Sound Effect by Universfield from Pixabay
 
 - Sonido de botón
 Sound Effect by Emiliano Dleon from Pixabay
-
-- Sonido de topo
-- Sonido de tap topo
-
-Arte:
-- Topo
-- Texto
-
-Dev:

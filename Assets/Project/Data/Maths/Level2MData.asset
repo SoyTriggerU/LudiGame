@@ -19,18 +19,18 @@ MonoBehaviour:
   levelTime: 45
   visibleTime: 2
   riseDuration: 0.25
-  riseDistance: 180
+  riseDistance: 250
   minSpawnInterval: 0.5
   maxSpawnInterval: 1.5
   maxConcurrentVisible: 2
   contentsSprites:
-  - {fileID: -5345435871839784581, guid: 2f13bb071f4f4624f96be4eb7291fd8f, type: 3}
-  - {fileID: -3059830652048113041, guid: 40eeacdf24b1d834894bb00da93cb9cf, type: 3}
-  - {fileID: 8957850788779409619, guid: c95a91a57d5756b4ebe5a83199acfbcb, type: 3}
-  - {fileID: 5930387388751348050, guid: edcd9d6ce9167c24d9aca7fd31f5886a, type: 3}
-  - {fileID: 6561858567411596728, guid: 443450a529e85d04f9b368f09a5a1a86, type: 3}
+  - {fileID: 4130640169021434097, guid: 03af8c97067e02443bf017a91a914e80, type: 3}
+  - {fileID: 5382512944479897801, guid: be7983b8fa270e74aa8d2c010c8fa71b, type: 3}
+  - {fileID: -922402802239089382, guid: fa57f66d2a0639245b8868e6348f6186, type: 3}
+  - {fileID: 6460059290704040764, guid: ec8d9d30c8effda4e9c2b5a82ed9b4ef, type: 3}
+  - {fileID: 6653994858678897968, guid: 632e8c402ae2e8e4abbded507f86cda2, type: 3}
   questions:
-  - 2 - 1
-  - 5 - 3
-  - 5 - 1
-  correctSpriteIndexPerQuestion: 000000000100000003000000
+  - ... + 3 = 10
+  - 2, 4, ..., 8
+  - ..., 10, 15, 20
+  correctSpriteIndexPerQuestion: 020000000400000000000000
