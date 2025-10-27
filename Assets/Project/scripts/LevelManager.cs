@@ -316,7 +316,7 @@ public class LevelManager : MonoBehaviour
     private IEnumerator ShowLevelCompleteAndEnd()
     {
         if (completeUI != null)
-            yield return completeUI.ShowMessage("NIVELL COMPLETAT!");
+            yield return completeUI.ShowMessage();
 
         OnLevelEnded?.Invoke();
         EndLevel();

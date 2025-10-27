@@ -6,7 +6,6 @@ Arte:
 - Topos catalan y ingles
 
 Dev:
-acabar de cambiar lvls
 ARREGLAR FADE (NO APARECE)
 quitar boton de exit en el main screen
 poner menu settings para audio

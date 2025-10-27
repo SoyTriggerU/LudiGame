@@ -19,18 +19,18 @@ MonoBehaviour:
   levelTime: 45
   visibleTime: 2
   riseDuration: 0.25
-  riseDistance: 180
+  riseDistance: 250
   minSpawnInterval: 0.5
   maxSpawnInterval: 1.5
   maxConcurrentVisible: 2
   contentsSprites:
-  - {fileID: -5850107864648418528, guid: 8bfb1a13139ed5b43a846486923d08fb, type: 3}
-  - {fileID: 1232240398260202421, guid: 5b93d9e10b1e0fe46ba6f914ebff2612, type: 3}
-  - {fileID: 3162568287252539508, guid: 6fa7609a4e8393b4695d008b88de9000, type: 3}
-  - {fileID: 3292793625578150579, guid: 7ca88f2bc5576bc4ca5c498c78872586, type: 3}
-  - {fileID: -6418337541015408120, guid: fa6c0f4aa01f135468282ffbad7eb412, type: 3}
+  - {fileID: -2687585069076979077, guid: 244fe2f6187f9554f996bc495651067d, type: 3}
+  - {fileID: 4303737205335725468, guid: b67d17bd73bf7bf42a788de006473109, type: 3}
+  - {fileID: -606033477821260893, guid: bea34915dff1db04db7b6e7979b3b57f, type: 3}
+  - {fileID: -5224054686543896216, guid: 42ebc3b601099f64589622d201094f1a, type: 3}
+  - {fileID: -2687585069076979077, guid: 244fe2f6187f9554f996bc495651067d, type: 3}
   questions:
-  - EMPIEZA POR LA LETRA V
-  - EMPIEZA POR LA LETRA Z
-  - EMPIEZA POR LA LETRA B
-  correctSpriteIndexPerQuestion: 000000000100000003000000
+  - 'CONJUNTO DE 10 UNIDADES: _ECENA'
+  - "PERSONA QUE ARREGLA LA ELECTRICIDAD_ EL\xC9CTR_CISTA"
+  - 'PRENDA DE VESTIR: _AMISA'
+  correctSpriteIndexPerQuestion: 000000000300000002000000

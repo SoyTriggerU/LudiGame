@@ -5,17 +5,16 @@ using UnityEngine.UI;
 public class MainMenuUI : MonoBehaviour
 {
     [SerializeField] private Button playButton;
-    [SerializeField] private Button exitButton;
+    [SerializeField] private Button settingsButton;
     [SerializeField] private Button creditsButton;
-    [SerializeField] private AudioSource audioSource;
 
     void Start()
     {
         if (playButton != null)
             playButton.onClick.AddListener(OnPlayClicked);
 
-        if (exitButton != null)
-            exitButton.onClick.AddListener(OnExitClicked);
+        if (settingsButton != null)
+            settingsButton.onClick.AddListener(OnSettingsClicked);
 
         if (creditsButton != null)
             creditsButton.onClick.AddListener(OnCreditsClicked);
@@ -33,13 +32,9 @@ public class MainMenuUI : MonoBehaviour
         SceneManager.LoadScene("CreditsScene");
     }
 
-    void OnExitClicked()
+    void OnSettingsClicked()
     {
         ClickSoundManager.Instance.PlayClick();
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
-        Application.Quit();
-#endif
+        SceneManager.LoadScene("SettingsScene");
     }
 }

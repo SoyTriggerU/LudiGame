@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 616de3dbc7f688b4d98bf14589c1c117, type: 3}
+  m_Name: Level2.1EData
+  m_EditorClassIdentifier: 
+  levelName: Level2.1
+  subject: English
+  spawnMode: 1
+  moleCount: 5
+  levelTime: 45
+  visibleTime: 2
+  riseDuration: 0.25
+  riseDistance: 250
+  minSpawnInterval: 0.5
+  maxSpawnInterval: 1.5
+  maxConcurrentVisible: 2
+  contentsSprites:
+  - {fileID: -2127497030343774, guid: 65fb00ef0b64af3479b9ffc2874200b3, type: 3}
+  - {fileID: 6620433998205069784, guid: a3f4da5ec247fa8459a76cb97bbe99fc, type: 3}
+  - {fileID: -8254764758678423639, guid: 5fcad83976560d6429b12b4228ac79d7, type: 3}
+  - {fileID: -7944644373998038830, guid: a9869ed2aa7ae644e8cac906b7ef9cf4, type: 3}
+  - {fileID: -919222818848966022, guid: eef54769959a3ae44a333139d78508a7, type: 3}
+  questions:
+  - THE COLOR OF SUN IS...
+  correctSpriteIndexPerQuestion: 01000000

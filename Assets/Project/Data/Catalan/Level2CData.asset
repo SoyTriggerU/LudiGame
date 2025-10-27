@@ -19,18 +19,18 @@ MonoBehaviour:
   levelTime: 45
   visibleTime: 2
   riseDuration: 0.25
-  riseDistance: 180
+  riseDistance: 250
   minSpawnInterval: 0.5
   maxSpawnInterval: 1.5
   maxConcurrentVisible: 2
   contentsSprites:
-  - {fileID: -2799025756769327729, guid: 68fe363d2432767499d6bf1b79af5188, type: 3}
-  - {fileID: 4359327472603921858, guid: 69e8c858226f1ac49aff19234d33bed0, type: 3}
-  - {fileID: -4534634967793127557, guid: e686f3cc98f3fba438a319fc51ceb44e, type: 3}
-  - {fileID: 8579111415464493206, guid: 823c7dd397cb82d4496529b961fcacdc, type: 3}
-  - {fileID: -4983721108374671077, guid: c77927686bf7ac14b971cab06fc01a34, type: 3}
+  - {fileID: 4616296149168526789, guid: 1cfa4a6414343234ba5c27c756733e26, type: 3}
+  - {fileID: -2316937204428959775, guid: 49057b662f97a9d469d93e7cce96e236, type: 3}
+  - {fileID: 1054846172142037111, guid: 49057b662f97a9d469d93e7cce96e236, type: 3}
+  - {fileID: 4041803963619154710, guid: 630f3e67bb0930b4eb979da24bf69286, type: 3}
+  - {fileID: 2880651753555951165, guid: 630f3e67bb0930b4eb979da24bf69286, type: 3}
   questions:
-  - "El n\xFAmero _uatre comen\xE7a per la lletra..."
-  - "_alentia comen\xE7a per..."
-  - "Per quina lletra comen\xE7a el lloc on vius?"
-  correctSpriteIndexPerQuestion: 010000000200000003000000
+  - "EL COLOR _LAU \xC9S EL COLOR DEL CEL"
+  - A LA TARDOR ELS ARBRES PERDEN LES _ULLES
+  - 'DIVENDRES, DISSA_TE Y DIUMENGE '
+  correctSpriteIndexPerQuestion: 010000000200000001000000

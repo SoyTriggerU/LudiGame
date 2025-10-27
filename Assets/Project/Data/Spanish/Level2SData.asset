@@ -19,18 +19,18 @@ MonoBehaviour:
   levelTime: 45
   visibleTime: 2
   riseDuration: 0.25
-  riseDistance: 180
+  riseDistance: 250
   minSpawnInterval: 0.5
   maxSpawnInterval: 1.5
   maxConcurrentVisible: 2
   contentsSprites:
-  - {fileID: 1232240398260202421, guid: 5b93d9e10b1e0fe46ba6f914ebff2612, type: 3}
-  - {fileID: 3292793625578150579, guid: 7ca88f2bc5576bc4ca5c498c78872586, type: 3}
-  - {fileID: 3162568287252539508, guid: 6fa7609a4e8393b4695d008b88de9000, type: 3}
-  - {fileID: -5850107864648418528, guid: 8bfb1a13139ed5b43a846486923d08fb, type: 3}
-  - {fileID: -6418337541015408120, guid: fa6c0f4aa01f135468282ffbad7eb412, type: 3}
+  - {fileID: -2687585069076979077, guid: 244fe2f6187f9554f996bc495651067d, type: 3}
+  - {fileID: -8680797543115379092, guid: b67d17bd73bf7bf42a788de006473109, type: 3}
+  - {fileID: 1304766224173039554, guid: bea34915dff1db04db7b6e7979b3b57f, type: 3}
+  - {fileID: -5465646382484160345, guid: 42ebc3b601099f64589622d201094f1a, type: 3}
+  - {fileID: 2042049135016041240, guid: c67c514ab2de5ea4bb6c4a57ff322ab7, type: 3}
   questions:
-  - "CU\xC1L DE ESTOS ANIMALES SU NOMBRE ES UNA PALABRA AGUDA?"
-  - "QUE ANIMAL SE ACENT\xDAA POR SER UNA PALABRA LLANA Y TERMINAR EN VOCAL?"
-  - "POR ORDEN ALFAB\xC9TICO, CU\xC1L SER\xCDA EL \xDALTIMO ANIMAL?"
-  correctSpriteIndexPerQuestion: 020000000100000000000000
+  - 'PARTE DEL CUERPO DE ALGUNOS ANIMALES QUE LES PERMITE VOLAR: _LA'
+  - "SIN\xD3NIMO DE PREFERIDO: _AVORITO"
+  - "ANT\xD3NIMO DE POSIBLE: _MPOSIBLE"
+  correctSpriteIndexPerQuestion: 010000000400000003000000

@@ -4,7 +4,6 @@ using System.Collections;
 
 public class LevelCompleteUI : MonoBehaviour
 {
-    [SerializeField] private TMP_Text messageText;
     [SerializeField] private CanvasGroup canvasGroup;
     [SerializeField] private float fadeDuration = 0.5f;
     [SerializeField] private float holdTime = 2f;
@@ -16,12 +15,9 @@ public class LevelCompleteUI : MonoBehaviour
         canvasGroup.alpha = 0;
     }
 
-    public IEnumerator ShowMessage(string message)
+    public IEnumerator ShowMessage()
     {
         LevelPassedAudioSource.Play();
-        messageText.text = message;
-
-       
 
         float t = 0;
         while (t < fadeDuration)

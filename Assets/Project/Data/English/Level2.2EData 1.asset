@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 616de3dbc7f688b4d98bf14589c1c117, type: 3}
-  m_Name: Level2EData
+  m_Name: Level2.2EData 1
   m_EditorClassIdentifier: 
-  levelName: Level2
+  levelName: Level2.2
   subject: English
   spawnMode: 1
   moleCount: 5
   levelTime: 45
   visibleTime: 2
   riseDuration: 0.25
-  riseDistance: 180
+  riseDistance: 250
   minSpawnInterval: 0.5
   maxSpawnInterval: 1.5
   maxConcurrentVisible: 2
@@ -30,7 +30,5 @@ MonoBehaviour:
   - {fileID: -976357313166502142, guid: 0d3a70b4ddcc326489b96ef9779a4ea8, type: 3}
   - {fileID: -5345435871839784581, guid: 2f13bb071f4f4624f96be4eb7291fd8f, type: 3}
   questions:
-  - YOU CAN DRAW STRAIGHT LINES WITH IT
-  - YOU CAN ERASE THE PENCIL
-  - IT CAN'T BE ERASED
-  correctSpriteIndexPerQuestion: 030000000200000000000000
+  - THE COLOR OF CHOCOLATE IS...
+  correctSpriteIndexPerQuestion: 03000000

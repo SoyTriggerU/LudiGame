@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 616de3dbc7f688b4d98bf14589c1c117, type: 3}
-  m_Name: Level1EData
+  m_Name: Level2.3EData 2
   m_EditorClassIdentifier: 
-  levelName: Level1
+  levelName: Level2.3
   subject: English
-  spawnMode: 0
+  spawnMode: 1
   moleCount: 5
   levelTime: 45
   visibleTime: 2
@@ -24,13 +24,11 @@ MonoBehaviour:
   maxSpawnInterval: 1.5
   maxConcurrentVisible: 2
   contentsSprites:
-  - {fileID: -6418337541015408120, guid: fa6c0f4aa01f135468282ffbad7eb412, type: 3}
   - {fileID: -7336805681979244506, guid: e20f82942b572194085a503ab7ad97ce, type: 3}
-  - {fileID: -976357313166502142, guid: 0d3a70b4ddcc326489b96ef9779a4ea8, type: 3}
+  - {fileID: -6418337541015408120, guid: fa6c0f4aa01f135468282ffbad7eb412, type: 3}
   - {fileID: 6977949062471825059, guid: ea68c7388316cf94fa85d9f30190115d, type: 3}
+  - {fileID: -976357313166502142, guid: 0d3a70b4ddcc326489b96ef9779a4ea8, type: 3}
   - {fileID: -5345435871839784581, guid: 2f13bb071f4f4624f96be4eb7291fd8f, type: 3}
   questions:
-  - CHOOSE THE COLOR RED
-  - CHOOSE THE COLOR PINK
-  - CHOOSE THE COLOR PURPLE
-  correctSpriteIndexPerQuestion: 000000000300000002000000
+  - THE COLOR OF THE HEART IS...
+  correctSpriteIndexPerQuestion: 02000000
