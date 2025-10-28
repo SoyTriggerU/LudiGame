@@ -30,7 +30,7 @@ MonoBehaviour:
   - {fileID: 1890989661803041374, guid: 9e8825f80d140dc4fad8a4e00e1dc6b6, type: 3}
   - {fileID: -4708220382404557354, guid: cb72debef84a80546a03ff6804c29da3, type: 3}
   questions:
-  - CA_OLA
-  - DOT_ENA
-  - LLAPI_
+  - CA...OLA
+  - DOT...ENA
+  - LLAPI...
   correctSpriteIndexPerQuestion: 040000000200000001000000

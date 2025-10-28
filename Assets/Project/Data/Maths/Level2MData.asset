@@ -30,7 +30,7 @@ MonoBehaviour:
   - {fileID: 6460059290704040764, guid: ec8d9d30c8effda4e9c2b5a82ed9b4ef, type: 3}
   - {fileID: 6653994858678897968, guid: 632e8c402ae2e8e4abbded507f86cda2, type: 3}
   questions:
-  - ... + 3 = 10
-  - 2, 4, ..., 8
-  - ..., 10, 15, 20
+  - "... \xF4 \xE7 \xF9 \xE2\xE0"
+  - "\xE4, \xE8, ..., \xEE"
+  - "..., \xE2\xE0, \xE2\xE9, \xE4\xE0"
   correctSpriteIndexPerQuestion: 020000000400000000000000

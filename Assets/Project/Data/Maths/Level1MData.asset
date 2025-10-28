@@ -30,7 +30,7 @@ MonoBehaviour:
   - {fileID: -2214249495721929474, guid: aea55424f579f234095ebdaaa7ff3d8a, type: 3}
   - {fileID: 9180251791023625898, guid: 20d61412385babf47bb4bdb5be43f6a2, type: 3}
   questions:
-  - 2 + 2
-  - 4 - 3
-  - 7 - 1
+  - "\xE4 \xF4 \xE4"
+  - "\xE8 \xF6 \xE7"
+  - "\xEB \xF6 \xE2"
   correctSpriteIndexPerQuestion: 030000000400000001000000

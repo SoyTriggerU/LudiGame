@@ -113,7 +113,7 @@ public class LevelSelector : MonoBehaviour
 
     public void ReturnButton()
     {
-        ClickSoundManager.Instance.PlayClick();
+        ClickSoundManager.Instance.PlayClick(); 
         MusicManager.Instance.PlayLastMenuMusic();
 
         ScoreManager.Instance.AddTempToGlobal();
