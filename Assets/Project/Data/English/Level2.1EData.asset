@@ -30,5 +30,5 @@ MonoBehaviour:
   - {fileID: -7944644373998038830, guid: a9869ed2aa7ae644e8cac906b7ef9cf4, type: 3}
   - {fileID: -919222818848966022, guid: eef54769959a3ae44a333139d78508a7, type: 3}
   questions:
-  - THE COLOR OF SUN IS...
+  - THE COLOR OF THE SUN IS...
   correctSpriteIndexPerQuestion: 01000000
