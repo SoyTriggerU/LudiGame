@@ -6,11 +6,10 @@ public class SoundSettingsManager : MonoBehaviour
 
     [Header("Música")]
     [SerializeField] private AudioSource[] musicSources;
+    public float musicVolume = 0.5f;
 
     [Header("Efectos (SFX)")]
     [SerializeField] private AudioSource[] sfxSources;
-    
-    public float musicVolume = 0.5f;
     public float sfxVolume = 0.5f;
 
     void Awake()

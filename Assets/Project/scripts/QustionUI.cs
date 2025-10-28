@@ -5,21 +5,25 @@ using UnityEngine.UI;
 
 public class QuestionUI : MonoBehaviour
 {
+    [Header("UI")]
     [SerializeField] private TMP_Text questionText;
     [SerializeField] private Image bubbleImage;
     private RectTransform rect;
     private CanvasGroup canvasGroup;
 
+    [Header("Parametres")]
     public float slideSpeed = 300f;
     public float fadeDuration = 0.5f;
     public float DelayBetweenQuestions = 2.5f;
     public float offscreenY = 800f;   
     public float topVisibleY = 250f;
 
+    [Header("Colors")]
     [SerializeField] private Sprite normalColor;
     [SerializeField] private Sprite correctColor;
     [SerializeField] private Sprite wrongColor;
 
+    [Header("Audio")]
     [SerializeField] private AudioSource CorrectAnswerAudio;
     [SerializeField] private AudioSource WrongAnswerAudio;
 

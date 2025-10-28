@@ -25,5 +25,7 @@ public class LevelData : ScriptableObject
 
     [Header("Preguntas")]
     public string[] questions;
+
+    [Header("Respuestas")]
     public int[] correctSpriteIndexPerQuestion;
 }

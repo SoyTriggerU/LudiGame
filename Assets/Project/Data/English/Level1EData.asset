@@ -19,18 +19,18 @@ MonoBehaviour:
   levelTime: 45
   visibleTime: 2
   riseDuration: 0.25
-  riseDistance: 250
+  riseDistance: 50
   minSpawnInterval: 0.5
   maxSpawnInterval: 1.5
   maxConcurrentVisible: 2
   contentsSprites:
-  - {fileID: -6418337541015408120, guid: fa6c0f4aa01f135468282ffbad7eb412, type: 3}
-  - {fileID: -7336805681979244506, guid: e20f82942b572194085a503ab7ad97ce, type: 3}
-  - {fileID: -976357313166502142, guid: 0d3a70b4ddcc326489b96ef9779a4ea8, type: 3}
-  - {fileID: 6977949062471825059, guid: ea68c7388316cf94fa85d9f30190115d, type: 3}
-  - {fileID: -5345435871839784581, guid: 2f13bb071f4f4624f96be4eb7291fd8f, type: 3}
+  - {fileID: -3567890065974240652, guid: c52fb1939caae3b47a41c71a09ffd751, type: 3}
+  - {fileID: 4067559658841054752, guid: c52fb1939caae3b47a41c71a09ffd751, type: 3}
+  - {fileID: -3544947417917996839, guid: 103e9b9ad2198244584dad0aff94d518, type: 3}
+  - {fileID: 89348497657836133, guid: 103e9b9ad2198244584dad0aff94d518, type: 3}
+  - {fileID: 7029294820078195080, guid: 00ca48fc569d1b8428f5a369c64ffc5d, type: 3}
   questions:
   - CHOOSE THE COLOR RED
   - CHOOSE THE COLOR PINK
   - CHOOSE THE COLOR PURPLE
-  correctSpriteIndexPerQuestion: 000000000000000000000000
+  correctSpriteIndexPerQuestion: 010000000000000003000000

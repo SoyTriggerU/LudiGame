@@ -6,13 +6,17 @@ using System.Collections;
 
 public class OutOfTimeUI : MonoBehaviour
 {
+    [Header("UI")]
     [SerializeField] private CanvasGroup canvasGroup;
     [SerializeField] private TMP_Text messageText;
     public Button restartButton;
     public Button menuButton;
+
+    [Header("Managers")]
     public LevelSelector levelSelector;
     private LevelManager levelManager;
 
+    [Header("Audio")]
     [SerializeField] private AudioSource outOfTimeAudioSource;
     [SerializeField] private AudioSource GameOverSource;
 

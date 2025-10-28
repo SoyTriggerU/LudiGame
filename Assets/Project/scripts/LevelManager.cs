@@ -1,17 +1,20 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.UI;
-using UnityEngine.SocialPlatforms.Impl;
 using System.Linq;
 
 public class LevelManager : MonoBehaviour
 {
+    [Header("Holes")]
     [SerializeField] private RectTransform[] backHoleTransforms;
     [SerializeField] private RectTransform[] frontHoleTransforms;
+
+    [Header("Moles")]
     [SerializeField] private GameObject molePrefab;
     [SerializeField] private Transform backMoleParent;
     [SerializeField] private Transform frontMoleParent;
+
+    [Header("UI")]
     [SerializeField] private LevelTimer timer;
     [SerializeField] private QuestionUI questionUI;
     [SerializeField] private LevelCompleteUI completeUI;
@@ -20,7 +23,6 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private bool acceptInput = true;
 
     List<MoleUI> moles = new List<MoleUI>();
-    private List<MoleUI> mustSpawnQueue = new List<MoleUI>();
 
     private LevelData levelData;
     private int currentQuestionIndex = 0;
@@ -85,9 +87,15 @@ public class LevelManager : MonoBehaviour
 
         foreach (var hole in backHoleTransforms)
         {
-            GameObject go = Instantiate(molePrefab, backMoleParent);
+            Transform maskTransform = hole.Find("mask");
+
+            Transform moleArea = maskTransform.Find("MoleArea");
+
+            GameObject go = Instantiate(molePrefab, moleArea);
             RectTransform rt = go.GetComponent<RectTransform>();
-            rt.anchoredPosition = hole.anchoredPosition;
+
+            rt.anchoredPosition = Vector2.zero;
+
             MoleUI mole = go.GetComponent<MoleUI>();
             mole.Setup(null, -1, levelData.riseDistance, levelData.riseDuration);
             mole.OnHit += OnMoleHit;
@@ -96,9 +104,15 @@ public class LevelManager : MonoBehaviour
 
         foreach (var hole in frontHoleTransforms)
         {
-            GameObject go = Instantiate(molePrefab, frontMoleParent);
+            Transform maskTransform = hole.Find("mask");
+
+            Transform moleArea = maskTransform.Find("MoleArea");
+
+            GameObject go = Instantiate(molePrefab, moleArea);
             RectTransform rt = go.GetComponent<RectTransform>();
-            rt.anchoredPosition = hole.anchoredPosition;
+
+            rt.anchoredPosition = Vector2.zero;
+
             MoleUI mole = go.GetComponent<MoleUI>();
             mole.Setup(null, -1, levelData.riseDistance, levelData.riseDuration);
             mole.OnHit += OnMoleHit;

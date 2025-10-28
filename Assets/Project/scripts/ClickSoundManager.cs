@@ -1,5 +1,4 @@
 using UnityEngine;
-using static UnityEngine.SpriteMask;
 
 public class ClickSoundManager : MonoBehaviour
 {

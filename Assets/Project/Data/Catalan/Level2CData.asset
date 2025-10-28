@@ -19,7 +19,7 @@ MonoBehaviour:
   levelTime: 45
   visibleTime: 2
   riseDuration: 0.25
-  riseDistance: 250
+  riseDistance: 50
   minSpawnInterval: 0.5
   maxSpawnInterval: 1.5
   maxConcurrentVisible: 2
@@ -28,9 +28,9 @@ MonoBehaviour:
   - {fileID: -2316937204428959775, guid: 49057b662f97a9d469d93e7cce96e236, type: 3}
   - {fileID: 1054846172142037111, guid: 49057b662f97a9d469d93e7cce96e236, type: 3}
   - {fileID: 4041803963619154710, guid: 630f3e67bb0930b4eb979da24bf69286, type: 3}
-  - {fileID: 2880651753555951165, guid: 630f3e67bb0930b4eb979da24bf69286, type: 3}
+  - {fileID: 8298472193722307821, guid: 10f76b00a0f1a9f44bc2e48714c772f6, type: 3}
   questions:
   - "_LAU \xC9S EL COLOR DEL CEL"
   - A LA TARDOR ELS ARBRES PERDEN LES _ULLES
-  - 'DIVENDRES, DISSA_TE I DIUMENGE '
-  correctSpriteIndexPerQuestion: 010000000200000001000000
+  - DI__UNS ES EL PRIMER DIA DE LA SETMANA
+  correctSpriteIndexPerQuestion: 010000000200000004000000

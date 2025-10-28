@@ -4,18 +4,23 @@ using UnityEngine.SceneManagement;
 
 public class LevelSelector : MonoBehaviour
 {
-
+    [Header("Levels")]
     [SerializeField] private LevelData[] MathLevels;
     [SerializeField] private LevelData[] EnglishLevels;      
     [SerializeField] private LevelData[] CatalanLevels;      
-    [SerializeField] private LevelData[] SpanishLevels;      
+    [SerializeField] private LevelData[] SpanishLevels;
+    public enum Subject { Math, English, Catalan, Spanish }
+
+    [SerializeField] private Subject currentSubject = Subject.Math;
+    [Header("Manager")]
     [SerializeField] private LevelManager levelManager;
+
+    [Header("Fader")]
     [SerializeField] private ScreenFader fader;
     [SerializeField] private float feedbackDelay = 1.5f;
 
     private int currentLevelIndex = 0;
-    public enum Subject { Math, English, Catalan, Spanish }
-    [SerializeField] private Subject currentSubject = Subject.Math;
+    
     private LevelData[] CurrentLevels
     {
         get
@@ -59,10 +64,7 @@ public class LevelSelector : MonoBehaviour
         {
             if (ScoreManager.Instance != null)
             {
-                Debug.Log(">>> Sumando temp al global...");
                 ScoreManager.Instance.AddTempToGlobal();
-                Debug.Log("TempScore: " + ScoreManager.Instance.TempScore +
-                          " | GlobalScore: " + ScoreManager.Instance.GlobalScore);
             }
 
             FinishSubject();
